@@ -1,0 +1,22 @@
+.labels {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 1rem;
+
+	.label {
+		margin: 0.5rem;
+		padding: 1rem;
+		background-color: rgba(0, 0, 0, 0.7);
+		border-radius: 0.5rem;
+		font-size: 1.1rem;
+		color: $light-color-1;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+
+@media screen and (max-height: 800px) {
+	.labels {
+		display: none;
+	}
+}

@@ -1,0 +1,38 @@
+.wrapper {
+	width: 95%;
+	max-width: 45rem;
+	height: 95vh;
+	max-height: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 4rem;
+	background-image: linear-gradient(to bottom, #434343 0%, black 70%);
+	box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+
+	&__frame {
+		position: relative;
+		width: 95%;
+		height: 90vh;
+		max-height: 950px;
+		border-radius: 4rem;
+		background-color: $dark-color-1;
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.wrapper {
+		width: 100%;
+		max-width: 100%;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+
+	.wrapper__frame {
+		width: 100%;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+}

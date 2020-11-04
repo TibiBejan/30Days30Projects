@@ -1,0 +1,23 @@
+.details {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 2rem;
+
+	.detail i {
+		font-size: 2.5rem;
+		color: $light-color-1;
+	}
+
+	.detail span {
+		margin-left: 0.5rem;
+		font-size: 1.8rem;
+		font-weight: 400;
+		color: $light-color-1;
+	}
+}
+
+@media screen and (max-height: 800px) {
+	.details {
+		display: none;
+	}
+}

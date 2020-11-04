@@ -1,0 +1,24 @@
+.rating {
+	display: flex;
+	align-items: center;
+	padding: 1.5rem 0;
+
+	.rating-stars {
+		display: flex;
+		margin-right: 1rem;
+
+		.star {
+			margin: 0 0.3rem;
+		}
+
+		.star i {
+			font-size: 1.5rem;
+			color: $light-color-1;
+		}
+	}
+
+	.rating-votes {
+		font-size: 1.4rem;
+		color: $light-color-1;
+	}
+}

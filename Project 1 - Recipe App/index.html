@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Recipe App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="wrapper__frame">
+                <!-- RECIPES CONTAINER -->
+                <div class="recipes">
+                    <form class="recipes__form">
+                        <input type="text" class="recipe-input" placeholder="Search for recipes..." autocomplete="off">
+                        <button type="submit" class="button submit-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                    <div class="recipes__heading">
+                        <h1 class="heading-one">Recipes Results</h1>
+                    </div>
+                    <div class="recipes__elements"></div>
+                </div> 
+                <!-- RECIPE OVERLAY -->
+                <div class="overlay">
+                    <nav class="overlay__navbar">
+                        <button type="submit" class="button back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button type="submit" class="button like-button">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </nav>
+                    <div class="overlay__content">
+                        <div class="overlay__content-header">
+                            <h2 class="heading-two heading-two-showcase"></h2>
+                            <div class="rating">
+                                <ul class="rating-stars">
+                                    <li class="star"><i class="fas fa-star"></i></li>
+                                    <li class="star"><i class="fas fa-star"></i></li>
+                                    <li class="star"><i class="fas fa-star"></i></li>
+                                    <li class="star"><i class="fas fa-star"></i></li>
+                                    <li class="star"><i class="far fa-star"></i></li>
+                                </ul>
+                                <span class="rating-votes">250 people score</span>
+                            </div>
+                            <div class="labels"></div>
+                        </div>
+                        <div class="overlay__content-inner">
+                            <p class="ingredients"></p>
+                            <a href="" target="_blank" class="button primary-button">View details</a>
+                        </div>
+                        <div class="overlay__content-footer">
+                            <div class="details">
+                                <div class="detail">
+                                    <i class="fas fa-weight"></i>
+                                    <span class="weight-info"></span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-clock"></i>
+                                    <span class="time-info"></span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-utensils"></i>
+                                    <span class="servings-info"></span>
+                                </div>
+                            </div>
+                            <div class="calories"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
