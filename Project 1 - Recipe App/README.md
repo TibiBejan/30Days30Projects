@@ -1,4 +1,4 @@
-<img src="images/recipe-preview.png" alt="Recipe app preview">
+<img src="image/recipe-preview.png" alt="Recipe app preview">
 
 # Features
 
