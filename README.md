@@ -8,4 +8,4 @@ Day | Project Name
 ------------ | -------------
 Day 1 | Recipe App
 Day 2 | Grid gallery - Slider
-
+Day 3 | Rick and Morty App
