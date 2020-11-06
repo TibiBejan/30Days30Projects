@@ -1,0 +1,39 @@
+html {
+	font-family: $primary-font;
+	font-size: 62.5%;
+	font-weight: 300;
+	color: $dark-color-1;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+}
+
+.outer-wrapper {
+	width: 100%;
+	max-width: 250rem;
+	min-height: 100vh;
+	margin: 0 auto;
+	background-color: $dark-color-1;
+}
+
+.inner-wrapper {
+	width: 100%;
+	max-width: 200rem;
+	margin: 0 auto;
+}
+
+// MARGIN CLASSES
+.mb-small {
+	margin-bottom: 2rem;
+}
+.mb-medium {
+	margin-bottom: 4rem;
+}
+.mb-large {
+	margin-bottom: 6rem;
+}
+.mb-xlarge {
+	margin-bottom: 8rem;
+}

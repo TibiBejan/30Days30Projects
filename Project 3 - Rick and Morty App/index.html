@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rick and Morty Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div class="outer-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <!-- HEADER NAVBAR -->
+            <nav class="header__navbar">
+                <div class="inner-wrapper">
+                    <div class="navbar-logo">
+                        <img src="./images/rick-and-morty-logo.png" alt="Rick Logo">
+                    </div>
+                    <a href="#" class="button transparent-button">Github</a>
+                </div>
+            </nav>
+            <!-- HEADER SHOWCASE -->
+            <div class="header__showcase">
+                <h1 class="heading-one mb-medium">The Rick and Morty Project</h1>
+                <form class="header__showcase-form">
+                    <input type="text" id="character" class="form-input mb-small" placeholder="Search for a character..." autocomplete="off">
+                    <label for="character" class="form-label">Enter the character name and view the results below.</label>
+                </form>
+            </div>
+        </header>
+
+        <!-- CHARACTERS SECTION -->
+        <section class="characters">
+            <div class="characters__content mb-xlarge"></div>
+            <button type="button" class="button primary-button">Load More...</button>
+        </section>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <h3 class="heading-three">30 Days of Code &copy;2020</h3>
+        </footer>
+    </div>
+        
+    <script src="script.js"></script>
+</body>
+</html>

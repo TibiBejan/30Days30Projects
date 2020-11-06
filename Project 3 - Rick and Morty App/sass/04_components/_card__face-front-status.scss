@@ -1,0 +1,23 @@
+.ball {
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1.5rem;
+	border-radius: 50%;
+	background-color: $light-color-1;
+	transition: $element-transition;
+}
+
+.ball-alive {
+	background-color: $alive-color;
+}
+
+.ball-dead {
+	background-color: $dead-color;
+}
+
+.status-label {
+	display: inline-block;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $light-color-1;
+}

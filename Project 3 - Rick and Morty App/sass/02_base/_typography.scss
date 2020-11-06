@@ -1,0 +1,89 @@
+.heading-one {
+	font-family: $showcase-font;
+	font-size: 7rem;
+	color: $light-color-1;
+	line-height: 1.2;
+	text-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
+	max-width: 70rem;
+}
+
+.heading-two {
+	margin-bottom: 0.5rem;
+	font-family: $showcase-font;
+	font-size: 2.2rem;
+	color: $light-color-1;
+	text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7);
+}
+
+.card__face-back .heading-two {
+	font-size: 2rem;
+}
+
+.heading-three {
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	color: $light-color-2;
+}
+
+.form-label {
+	font-size: 1.7rem;
+	font-weight: 600;
+	max-width: 30rem;
+	letter-spacing: 0.2rem;
+	color: $light-color-1;
+}
+
+.location-status,
+.first_seen-status {
+	font-family: $showcase-font;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $light-color-1;
+	letter-spacing: 0.2rem;
+	text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.7);
+}
+
+.location,
+.episode {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: $light-color-1;
+	letter-spacing: 0.15rem;
+}
+
+@media screen and (max-width: 850px) {
+	.heading-one {
+		font-size: 5rem;
+		max-width: 60rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.heading-two {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.heading-one {
+		font-size: 4rem;
+		max-width: 35rem;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.heading-one {
+		font-size: 3.5rem;
+		max-width: 25rem;
+	}
+
+	.form-label {
+		max-width: 20rem;
+		font-size: 1.4rem;
+	}
+
+	.heading-three {
+		font-size: 1.5rem;
+	}
+}

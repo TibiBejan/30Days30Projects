@@ -1,0 +1,38 @@
+.card {
+	height: 35vh;
+	perspective: 200rem;
+	-moz-perspective: 200rem;
+	$transition: $element-transition;
+
+	&__inner {
+		position: relative;
+		height: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transition: $element-transition;
+		cursor: pointer;
+
+		.card__face {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			overflow: hidden;
+			border-radius: 1rem;
+			box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+.card.clicked .card__inner {
+	transform: rotateY(-180deg);
+}
+
+@media screen and (max-width: 400px) {
+	.card {
+		height: 50vh;
+		width: 30rem;
+	}
+}
