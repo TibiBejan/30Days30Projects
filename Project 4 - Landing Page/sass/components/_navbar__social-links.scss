@@ -1,0 +1,29 @@
+.navbar__social-links {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+
+  .social-item {
+    width: 4rem;
+    height: 4rem;
+
+    .social-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+
+      .fab {
+        font-size: 3rem;
+        color: $color-grey-light-1;
+        transition: 0.2s ease;
+      }
+
+      .fab:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

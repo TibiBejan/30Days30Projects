@@ -1,0 +1,45 @@
+.footer {
+  background-color: $color-secondary;
+  grid-column: full-start / full-end;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+
+
+  @media all and (max-width: $bp-medium) {
+    padding: 5rem;
+  }
+
+  @media all and (max-width: $bp-small) {
+    padding: 2rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media all and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+
+  .copyright {
+    width: 50%;
+    max-width: 1000px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: $font-display;
+    color: $color-grey-light-2;
+
+    @media all and (max-width: $bp-largest) {
+      width: 60%;
+    }
+
+    @media all and (max-width: $bp-medium) {
+      width: 80%;
+    }
+  }
+}

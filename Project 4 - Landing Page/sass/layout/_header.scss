@@ -1,0 +1,75 @@
+.header {
+  background-image: linear-gradient(rgba(16, 29, 44, 0.95),
+      rgba(16, 29, 44, 0.95)),
+    url("/images/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 4rem 8rem 8rem 8rem;
+  display: grid;
+  grid-template-rows: 1fr repeat(2, min-content) 1fr repeat(2, min-content);
+  grid-template-columns: minmax(min-content, max-content);
+  grid-gap: 1.5rem;
+  grid-column: full-start / col-end 6;
+  justify-content: center;
+
+  @media screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (max-width: $bp-small) {
+    padding: 4rem;
+    text-align: center;
+  }
+
+  &__logo {
+    height: 3rem;
+    justify-self: center;
+  }
+
+  &__btn {
+    align-self: start;
+    justify-self: start;
+
+    @media screen and (max-width: $bp-small) {
+      justify-self: center;
+    }
+  }
+
+  &__seon-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-gap: 1.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    color: $color-grey-light-2;
+    text-align: center;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 0.1rem;
+      background-color: $color-grey-light-2;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0.1rem;
+      background-color: $color-grey-light-2;
+    }
+  }
+
+  &__seon-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-items: center;
+    align-items: flex-end;
+
+    img {
+      max-height: 2.5rem;
+      max-width: 100%;
+      filter: brightness(70%);
+    }
+  }
+}

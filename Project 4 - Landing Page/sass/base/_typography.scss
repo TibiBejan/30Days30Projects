@@ -1,0 +1,33 @@
+.heading-one {
+  @extend %heading;
+  font-size: 4.5rem;
+  color: $color-grey-light-1;
+  line-height: 1;
+}
+
+.heading-two {
+  @extend %heading;
+  font-size: 3.5rem;
+  font-style: italic;
+  color: $color-grey-dark-2;
+  line-height: 1;
+}
+
+.heading-three {
+  @extend %heading;
+  font-size: 1.7rem;
+  color: $color-primary;
+  text-transform: uppercase;
+}
+
+.heading-four {
+  @extend %heading;
+  font-size: 2rem;
+  color: $color-primary;
+}
+
+.heading-five {
+  @extend %heading;
+  font-size: 1.7rem;
+  color: $color-grey-light-1;
+}

@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35rem;
+  height: 100%;
+  transform: translateX(-100%);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.97), rgba(198, 153, 99, 0.97)), url('/images/story-2.jpeg');
+  background-size: cover;
+  transition: transform 0.3s ease-in;
+  z-index: 5;
+
+  &__links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__social-links {
+    position: absolute;
+    left: 50%;
+    bottom: 5rem;
+    transform: translateX(-50%);
+  }
+}
+
+.navbar.open {
+  transform: translateX(0);
+}
+
+//linear-gradient(rgba(16, 29, 44, 0.98), rgba(16, 29, 44, 0.98))

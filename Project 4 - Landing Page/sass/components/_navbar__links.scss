@@ -1,0 +1,21 @@
+.navbar__links {
+  width: 100%;
+  display: block;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    .link {
+      color: $color-grey-light-1;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}
