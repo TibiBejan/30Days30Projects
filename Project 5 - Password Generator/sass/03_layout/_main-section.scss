@@ -1,0 +1,66 @@
+.main-section {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.password-generator {
+		width: 100%;
+		max-width: 55rem;
+		min-height: 55vh;
+		background-color: $dark-color-3;
+		border-radius: 3rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 5rem;
+
+		&__result,
+		&__lenght,
+		&__option {
+			width: 100%;
+			height: 7rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1.5rem;
+			padding: 2rem;
+			background-color: $dark-color-2;
+			border-radius: 1.5rem;
+		}
+
+		&__result {
+			margin-bottom: 4rem;
+			cursor: pointer;
+		}
+
+		&__lenght {
+			position: relative;
+
+			.length {
+				position: absolute;
+				left: 1.5rem;
+				top: -2.5rem;
+				font-size: 1.5rem;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+
+		&__option {
+			justify-content: space-between;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.main-section .password-generator {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 0;
+		box-shadow: none;
+		padding: 5rem 2rem;
+	}
+}

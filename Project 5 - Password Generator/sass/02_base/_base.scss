@@ -1,0 +1,18 @@
+html {
+	font-family: $font;
+	font-size: 62.5%;
+	font-weight: 300;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background-color: $dark-color-4;
+	color: $light-color-1;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 150rem;
+	margin: 0 auto;
+}

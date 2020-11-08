@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-16">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- PASSWORD GENERATOR -->
+        <section class="main-section">
+            <div class="password-generator">
+                <h1 class="heading-one">Password Generator</h1>
+                <div class="password-generator__result">
+                    <h3 class="heading-three" id="password">Click Generate</h3>
+                </div>
+                <div class="password-generator__lenght">
+                    <p class="length">Length: <span class="characters"></span></p>
+                    <input type="range" id="password-range" min="4" max="32">
+                </div>
+                <div class="password-generator__option">
+                    <p class="option-text">Include lowercase</p>
+                    <div class="checkbox-toggler">
+                        <input type="checkbox" class="checkbox" id="lowercase" checked disabled>
+                        <label for="lowercase" class="toggler">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="password-generator__option">
+                    <p class="option-text">Include uppercase</p>
+                    <div class="checkbox-toggler">
+                        <input type="checkbox" class="checkbox" id="uppercase">
+                        <label for="uppercase" class="toggler">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="password-generator__option">
+                    <p class="option-text">Include numbers</p>
+                    <div class="checkbox-toggler">
+                        <input type="checkbox" class="checkbox" id="numbers">
+                        <label for="numbers" class="toggler">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="password-generator__option">
+                    <p class="option-text">Include symbols</p>
+                    <div class="checkbox-toggler">
+                        <input type="checkbox" class="checkbox" id="symbols">
+                        <label for="symbols" class="toggler">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Generate Password</button>
+            </div>
+        </section>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+.submit-button {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-radius: 2rem;
+  transition: 0.5s ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #38434f;
+  color: #ffffff;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 150rem;
+  margin: 0 auto;
+}
+
+.heading-one {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 3rem;
+}
+
+.heading-three {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+}
+
+.option-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 550px) {
+  .heading-one {
+    font-size: 2rem;
+  }
+  .heading-three {
+    font-size: 1.4rem;
+  }
+}
+
+.main-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-section .password-generator {
+  width: 100%;
+  max-width: 55rem;
+  min-height: 55vh;
+  background-color: #232a31;
+  border-radius: 3rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem;
+}
+
+.main-section .password-generator__result, .main-section .password-generator__lenght, .main-section .password-generator__option {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 2rem;
+  background-color: #191f24;
+  border-radius: 1.5rem;
+}
+
+.main-section .password-generator__result {
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+.main-section .password-generator__lenght {
+  position: relative;
+}
+
+.main-section .password-generator__lenght .length {
+  position: absolute;
+  left: 1.5rem;
+  top: -2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-section .password-generator__option {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 550px) {
+  .main-section .password-generator {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 5rem 2rem;
+  }
+}
+
+.submit-button {
+  width: 100%;
+  padding: 2rem 0;
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  background-size: 200%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.submit-button:hover {
+  background-position: right;
+}
+
+.checkbox-toggler {
+  width: 6rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  background-color: #232a31;
+  overflow: hidden;
+}
+
+.checkbox-toggler .checkbox {
+  display: none;
+}
+
+.checkbox-toggler .checkbox:checked + .toggler .ball {
+  transform: translateX(2.5rem);
+}
+
+.checkbox-toggler .checkbox:checked + .toggler {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.checkbox-toggler .toggler {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.checkbox-toggler .toggler .ball {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: inset -0.2rem -0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  transform: translateX(0);
+  transition: 0.25s ease-out;
+}
+
+#password-range {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+#password-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+#password-range:focus {
+  outline: none;
+}
+
+#password-range::-ms-track {
+  width: 90%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+#password-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#password-range::-moz-range-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#password-range::-ms-thumb {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  box-shadow: inset 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+}
+
+#password-range::-webkit-slider-runnable-track {
+  width: 90%;
+  height: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  border-radius: 1rem;
+}
+
+#password-range:focus::-webkit-slider-runnable-track {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+#password-range::-moz-range-track {
+  width: 90%;
+  height: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  border-radius: 1rem;
+}
+
+#password-range::-ms-track {
+  width: 80%;
+  height: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.3rem rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+  border-radius: 1rem;
+}

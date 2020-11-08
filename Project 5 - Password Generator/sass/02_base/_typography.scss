@@ -1,0 +1,29 @@
+.heading-one {
+	font-size: 3rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	margin-bottom: 3rem;
+}
+
+.heading-three {
+	text-align: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+	letter-spacing: 0.15rem;
+}
+
+.option-text {
+	font-size: 1.6rem;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 550px) {
+	.heading-one {
+		font-size: 2rem;
+	}
+
+	.heading-three {
+		font-size: 1.4rem;
+	}
+}
