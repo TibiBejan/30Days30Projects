@@ -1,0 +1,71 @@
+.login {
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/showcase-image.jpg');
+	background-size: cover;
+	background-position: center;
+
+	&__form {
+		width: 100%;
+		max-width: 45rem;
+		min-height: 30vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 5rem;
+		background-color: $light-color-1;
+		border-radius: 2rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	}
+
+	.heading-one {
+		margin-bottom: 3rem;
+		font-size: 3rem;
+		font-weight: 400;
+		letter-spacing: 0.1rem;
+		text-transform: uppercase;
+	}
+
+	input {
+		width: 100%;
+		margin-bottom: 1.5rem;
+		padding: 2rem;
+		outline: none;
+		border: none;
+		background-color: $light-color-2;
+		box-shadow: inset 1rem 1rem 0.5rem $light-color-3;
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	.primary-button {
+		width: 50%;
+		margin: 0 auto;
+		padding: 2rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $light-color-1;
+		border-radius: 1rem;
+		background-color: $dark-color;
+		transition: all 0.3s ease;
+	}
+
+	.primary-button:hover {
+		opacity: 0.9;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.login {
+		padding: 1rem;
+
+		&__form {
+			padding: 5rem 2rem;
+		}
+	}
+}

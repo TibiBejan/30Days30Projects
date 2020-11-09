@@ -1,0 +1,20 @@
+html {
+	font-family: $font;
+	font-size: 62.5%;
+	font-weight: 300;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	background-color: $light-color-2;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 140rem;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
