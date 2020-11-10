@@ -1,0 +1,26 @@
+.header {
+	position: relative;
+	min-height: 9.5rem;
+	max-height: 10vh;
+	background-color: $light-color-1;
+	box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	transition: $transition;
+
+	&__navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 150rem;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: $transition;
+}

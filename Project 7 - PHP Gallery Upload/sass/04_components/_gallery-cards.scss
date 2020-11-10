@@ -1,0 +1,43 @@
+.gallery__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 40rem));
+	gap: 3rem;
+	justify-content: center;
+
+	.card {
+		height: 45rem;
+		display: grid;
+		grid-template-rows: 30rem repeat(2, min-content);
+		row-gap: 1rem;
+		background-color: $light-color-1;
+		box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+
+		&__image {
+			grid-row: 1 / 2;
+			background-size: cover;
+			background-position: center;
+		}
+
+		&__title {
+			grid-row: 2 / 3;
+			padding: 0 2rem;
+			text-align: left;
+			font-size: 1.7rem;
+			font-weight: 600;
+			letter-spacing: 0.1rem;
+		}
+
+		&__description {
+			grid-row: 3 / 4;
+			padding: 0 2rem;
+			text-align: left;
+			font-size: 1.1rem;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.gallery__cards {
+		grid-template-columns: minmax(20rem, 1fr);
+	}
+}

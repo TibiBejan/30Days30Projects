@@ -1,0 +1,100 @@
+.gallery__form {
+	width: 100%;
+	max-width: 50rem;
+	margin: 3rem auto;
+	padding: 5rem 3rem;
+	border-radius: 2rem;
+	box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: $light-color-1;
+
+	.form-input {
+		display: block;
+		width: 100%;
+		max-width: 40rem;
+		margin-bottom: 2rem;
+		padding: 2rem;
+		outline: none;
+		border: none;
+		border-radius: 2rem;
+		background-color: $light-color-2;
+		box-shadow: inset 0.5rem 0.5rem 1rem $light-color-3, inset -0.5rem -0.5rem 1rem $light-color-1,
+			0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+		font-size: 1.5rem;
+		font-weight: 400;
+	}
+
+	textarea {
+		resize: vertical;
+		min-height: 6rem;
+		max-height: 20rem;
+	}
+
+	.submit-button {
+		display: inline-block;
+		width: 20rem;
+		margin: 0 auto;
+		padding: 2rem;
+		border-radius: 2rem;
+		background-color: $light-color-2;
+		font-size: 1.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.15rem;
+		color: $dark-color;
+		box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+		transition: $transition;
+	}
+
+	.submit-button:hover {
+		background-color: $dark-color;
+		color: $light-color-1;
+	}
+
+	.error,
+	.success {
+		display: none;
+		width: 100%;
+		max-width: 40rem;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background-color: red;
+		border-radius: 2rem;
+		background-color: $light-color-2;
+		box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+		transition: $transition;
+
+		.heading-two {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+	}
+
+	.error .heading-two {
+		color: red;
+	}
+
+	.success .heading-two {
+		color: green;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.gallery__form .form-input {
+		padding: 1.5rem;
+		font-size: 1.2rem;
+	}
+
+	textarea {
+		resize: vertical;
+		height: 20rem;
+	}
+
+	.gallery__form .submit-button {
+		padding: 1.5rem;
+		font-size: 1.2rem;
+	}
+}

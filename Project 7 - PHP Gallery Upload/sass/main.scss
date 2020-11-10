@@ -1,0 +1,13 @@
+@import './01_abstracts/variables';
+
+@import './02_base/base';
+@import './02_base/reset';
+
+@import './03_layout/header';
+@import './03_layout/gallery';
+@import './03_layout/footer';
+
+@import './04_components/navbar-components';
+@import './04_components/hamburger-toggle';
+@import './04_components/gallery-cards';
+@import './04_components/gallery-form';
