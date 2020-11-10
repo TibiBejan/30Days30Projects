@@ -259,8 +259,24 @@ body {
   opacity: 0.9;
 }
 
-.signup p {
-  font-size: 2rem;
+.signup .error {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  outline: none;
+  border: 0.2rem solid red;
+  background-color: #f6f6f6;
+  box-shadow: inset 1rem 1rem 0.5rem #eeeeee;
+  display: none;
+  text-align: center;
+}
+
+.signup .error .heading-two {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.signup .error .heading-two {
   color: red;
 }
 
@@ -333,6 +349,27 @@ body {
 
 .login .primary-button:hover {
   opacity: 0.9;
+}
+
+.login .error {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  outline: none;
+  border: 0.2rem solid red;
+  background-color: #f6f6f6;
+  box-shadow: inset 1rem 1rem 0.5rem #eeeeee;
+  display: none;
+  text-align: center;
+}
+
+.login .error .heading-two {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.login .error .heading-two {
+  color: red;
 }
 
 @media screen and (max-width: 500px) {

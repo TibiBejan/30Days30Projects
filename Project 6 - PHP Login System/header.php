@@ -36,7 +36,7 @@
                         ?>
 
                         <li class="list-item">
-                            <a href="#" class="navbar-link">Github</a>
+                            <a href="https://github.com/TibiBejan/30Days30Projects/tree/main/Project%206%20-%20PHP%20Login%20System" class="navbar-link">Github</a>
                         </li>
                     </ul>
                     <div class="header__navbar-hamburger">

@@ -59,8 +59,24 @@
 		opacity: 0.9;
 	}
 
-	p {
-		font-size: 2rem;
+	.error {
+		width: 100%;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		outline: none;
+		border: 0.2rem solid red;
+		background-color: $light-color-2;
+		box-shadow: inset 1rem 1rem 0.5rem $light-color-3;
+		display: none;
+		text-align: center;
+
+		.heading-two {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+	}
+
+	.error .heading-two {
 		color: red;
 	}
 }
