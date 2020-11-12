@@ -1,0 +1,56 @@
+.heading-one {
+	margin-bottom: 1rem;
+	font-size: 3rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	line-height: 1.5;
+
+	@media screen and (max-width: 550px) {
+		font-size: 2rem;
+	}
+}
+
+.heading-three {
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+	justify-self: start;
+}
+
+.paragraph {
+	font-size: 1.7rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	color: $dark-color-text-2;
+}
+
+.followers-number {
+	font-size: 5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	margin-bottom: 1rem;
+}
+
+.followers-span {
+	font-size: 1.7rem;
+	font-weight: 400;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+	color: $dark-color-text-2;
+}
+
+.status {
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: 600;
+	justify-self: end;
+}
+
+.status-positive {
+	color: $lime-green;
+}
+
+.status-negative {
+	color: $red;
+}

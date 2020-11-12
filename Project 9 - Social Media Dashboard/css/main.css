@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  padding-top: 0;
+  background-color: #ffffff;
+  color: #1e202a;
+  transition: 0.25s ease-in-out;
+}
+
+.dashboard {
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1450px) {
+  .dashboard {
+    max-width: 125rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .dashboard {
+    max-width: 105rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dashboard {
+    max-width: 90rem;
+  }
+}
+
+.dashboard__header {
+  min-height: 10vh;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard__header-theme {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 650px) {
+  .dashboard__header {
+    min-height: 15vh;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    padding-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dashboard__header-theme {
+    width: 100%;
+    padding-top: 3rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.dashboard__header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30rem;
+  background-color: #f5f7ff;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  z-index: -1;
+}
+
+body.dark-theme {
+  background-color: #1e202a;
+  color: #ffffff;
+}
+
+body.dark-theme .dashboard__header::before {
+  background-color: #1f212e;
+}
+
+body.dark-theme .dashboard__followers-card {
+  background-color: #252a41;
+}
+
+body.dark-theme .card {
+  background-color: #252a41;
+}
+
+i {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 3rem;
+  justify-self: end;
+}
+
+.fa-facebook-square {
+  color: #198ff5;
+}
+
+.fa-instagram {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.fa-twitter-square {
+  color: #1ca0f2;
+}
+
+.fa-youtube {
+  color: #c4032a;
+}
+
+.heading-one {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 550px) {
+  .heading-one {
+    font-size: 2rem;
+  }
+}
+
+.heading-three {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  justify-self: start;
+}
+
+.paragraph {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: #63687e;
+}
+
+.followers-number {
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.followers-span {
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: #63687e;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  justify-self: end;
+}
+
+.status-positive {
+  color: #1db489;
+}
+
+.status-negative {
+  color: #dc414c;
+}
+
+.dashboard__followers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(15rem, 40rem));
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1450px) {
+  .dashboard__followers {
+    grid-template-columns: repeat(4, minmax(15rem, 30rem));
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dashboard__followers {
+    grid-template-columns: repeat(3, minmax(15rem, 30rem));
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .dashboard__followers {
+    grid-template-columns: repeat(2, minmax(15rem, 40rem));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dashboard__followers {
+    grid-template-columns: minmax(15rem, 50rem);
+  }
+}
+
+.dashboard__followers-card {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f0f2fa;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.dashboard__followers-card:hover {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.dashboard__followers-card .user {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard__followers-card .followers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard__followers #facebook {
+  border-top: 0.7rem solid #198ff5;
+}
+
+.dashboard__followers #twitter {
+  border-top: 0.7rem solid #1ca0f2;
+}
+
+.dashboard__followers #instagram {
+  position: relative;
+}
+
+.dashboard__followers #instagram::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.7rem;
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.dashboard__followers #youtube {
+  border-top: 0.7rem solid #c4032a;
+}
+
+.dashboard__overview .heading-one {
+  margin-bottom: 3rem;
+}
+
+.dashboard__overview-info {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20rem, 40rem));
+  gap: 3rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1450px) {
+  .dashboard__overview-info {
+    grid-template-columns: repeat(4, minmax(15rem, 30rem));
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .dashboard__overview-info {
+    grid-template-columns: repeat(3, minmax(15rem, 30rem));
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .dashboard__overview-info {
+    grid-template-columns: repeat(2, minmax(15rem, 40rem));
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dashboard__overview-info {
+    grid-template-columns: minmax(15rem, 50rem);
+  }
+}
+
+.dashboard__overview-info .card {
+  width: 100%;
+  height: 15rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 2rem 4rem;
+  align-items: center;
+  justify-items: center;
+  background-color: #f0f2fa;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.dashboard__overview-info .card:hover {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.dashboard__overview-info .card .fa-arrow-up,
+.dashboard__overview-info .card .fa-arrow-down {
+  font-size: 1.5rem;
+}
+
+.dashboard__overview-info .card .card-info {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #63687e;
+  justify-self: start;
+}
+
+.theme-switcher {
+  display: flex;
+  margin-left: 2rem;
+}
+
+.theme-switcher #checkbox {
+  display: none;
+}
+
+.theme-switcher #checkbox:checked + .switch {
+  background-color: transparent;
+  background-image: linear-gradient(to right, #378fe6, #3eda82);
+}
+
+.theme-switcher #checkbox:checked + .switch .ball {
+  transform: translateX(4rem);
+  background-color: #252a41;
+}
+
+.theme-switcher .switch {
+  position: relative;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 3rem;
+  background-color: #aeb3cb;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.theme-switcher .switch .ball {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+  transition: 0.25s ease-in-out;
+}

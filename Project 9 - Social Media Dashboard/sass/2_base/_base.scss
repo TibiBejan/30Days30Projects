@@ -1,0 +1,126 @@
+html {
+	font-family: $primary-font;
+	font-size: 62.5%;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	@media screen and (max-width: 800px) {
+		font-size: 50%;
+	}
+}
+
+body {
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	padding: 5rem;
+	padding-top: 0;
+	background-color: $light-color-1;
+	color: $dark-color-text-3;
+	transition: 0.25s ease-in-out;
+}
+
+.dashboard {
+	max-width: 140rem;
+	width: 100%;
+	margin: 0 auto;
+
+	@media screen and (max-width: 1450px) {
+		max-width: 125rem;
+	}
+
+	@media screen and (max-width: 1300px) {
+		max-width: 105rem;
+	}
+
+	@media screen and (max-width: 1100px) {
+		max-width: 90rem;
+	}
+
+	&__header {
+		min-height: 10vh;
+		height: 15rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-theme {
+			display: flex;
+			align-items: center;
+		}
+
+		@media screen and (max-width: 650px) {
+			min-height: 15vh;
+			margin-bottom: 3rem;
+			padding: 3rem;
+			padding-bottom: 0;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&-theme {
+				width: 100%;
+				padding-top: 3rem;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+	}
+
+	&__header::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 30rem;
+		background-color: $light-color-2;
+		border-bottom-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+		z-index: -1;
+	}
+}
+
+body.dark-theme {
+	background-color: $dark-color-1;
+	color: $light-color-1;
+
+	.dashboard__header::before {
+		background-color: $dark-color-2;
+	}
+
+	.dashboard__followers-card {
+		background-color: $dark-color-3;
+	}
+
+	.card {
+		background-color: $dark-color-3;
+	}
+}
+
+i {
+	display: inline-block;
+	margin-right: 1rem;
+	font-size: 3rem;
+	justify-self: end;
+}
+
+.fa-facebook-square {
+	color: $facebook-color;
+}
+
+.fa-instagram {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-image: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.fa-twitter-square {
+	color: $twitter-color;
+}
+
+.fa-youtube {
+	color: $youtube-color;
+}

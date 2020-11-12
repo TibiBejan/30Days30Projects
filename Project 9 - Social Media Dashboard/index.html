@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Social Media Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="dashboard">
+            <div class="dashboard__header">
+                <div class="dashboard__header-content">
+                    <h1 class="heading-one">Social Media Dashboard</h1>
+                    <p class="paragraph">Total Followers: 23.004</p>
+                </div>
+                <div class="dashboard__header-theme">
+                    <p class="paragraph">Dark Mode</p>
+                    <div class="theme-switcher">
+                        <input type="checkbox" id="checkbox">
+                        <label for="checkbox" class="switch">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard__followers">
+                <div class="dashboard__followers-card" id="facebook">
+                    <div class="user">
+                        <i class="fab fa-facebook-square"></i>
+                        <p class="paragraph">@Project9</p>
+                    </div>
+                    <div class="followers">
+                        <h2 class="followers-number">1998</h2>
+                        <span class="followers-span">Followers</span>
+                    </div>
+                    <div class="status status-positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12 Today</span>
+                    </div>
+                </div>
+                <div class="dashboard__followers-card" id="twitter">
+                    <div class="user">
+                        <i class="fab fa-twitter-square"></i>
+                        <p class="paragraph">@Project9</p>
+                    </div>
+                    <div class="followers">
+                        <h2 class="followers-number">2500</h2>
+                        <span class="followers-span">Followers</span>
+                    </div>
+                    <div class="status status-positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>100 Today</span>
+                    </div>
+                </div>
+                <div class="dashboard__followers-card" id="instagram">
+                    <div class="user">
+                        <i class="fab fa-instagram"></i>
+                        <p class="paragraph">@Project9</p>
+                    </div>
+                    <div class="followers">
+                        <h2 class="followers-number">5000</h2>
+                        <span class="followers-span">Followers</span>
+                    </div>
+                    <div class="status status-positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>550 Today</span>
+                    </div>
+                </div>
+                <div class="dashboard__followers-card" id="youtube">
+                    <div class="user">
+                        <i class="fab fa-youtube"></i>
+                        <p class="paragraph">@Project9</p>
+                    </div>
+                    <div class="followers">
+                        <h2 class="followers-number">300</h2>
+                        <span class="followers-span">Followers</span>
+                    </div>
+                    <div class="status status-negative">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>20 Today</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard__overview">
+                <h1 class="heading-one">Overview - Today</h1>
+                <div class="dashboard__overview-info">
+                    <div class="card">
+                        <span class="card-info">Page Views</span>
+                        <i class="fab fa-facebook-square"></i>
+                        <h3 class="heading-three">90</h3>
+                        <div class="status status-positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>3%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-info">Likes</span>
+                        <i class="fab fa-facebook-square"></i>
+                        <h3 class="heading-three">220</h3>
+                        <div class="status status-negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>2%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <span class="card-info">Likes</span>
+                        <i class="fab fa-instagram"></i>
+                        <h3 class="heading-three">5600</h3>
+                        <div class="status status-positive">
+                           <i class="fas fa-arrow-up"></i>
+                            <span>2500%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <span class="card-info">Profile Views</span>
+                         <i class="fab fa-instagram"></i>
+                        <h3 class="heading-three">55k</h3>
+                        <div class="status status-positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>1350%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <span class="card-info">Retweets</span>
+                         <i class="fab fa-twitter-square"></i>
+                        <h3 class="heading-three">115</h3>
+                        <div class="status status-positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>301%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <span class="card-info">Likes</span>
+                         <i class="fab fa-twitter-square"></i>
+                        <h3 class="heading-three">500</h3>
+                        <div class="status status-positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>105%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <span class="card-info">Likes</span>
+                         <i class="fab fa-youtube"></i>
+                        <h3 class="heading-three">105</h3>
+                        <div class="status status-negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>19%</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                         <span class="card-info">Total Views</span>
+                         <i class="fab fa-youtube"></i>
+                        <h3 class="heading-three">1405</h3>
+                        <div class="status status-negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>12%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
