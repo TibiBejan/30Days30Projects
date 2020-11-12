@@ -1,1 +1,1 @@
-<img src="images/social-media-dashboard-preview" alt="Project 9">
+<img src="images/social-media-dashboard-preview.png" alt="Project 9">
