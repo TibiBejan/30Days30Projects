@@ -6,22 +6,19 @@ const timezone_h2 = document.getElementById('timezone');
 const isp_h2 = document.getElementById('isp');
 
 const map_div = document.getElementById('app__map');
+const mymap = L.map(map_div).setView([0,0], 13);
+const marker = L.marker([0, 0]).addTo(mymap);
+
 let searchQuery = '';
 
 // EVENT LISTENERS
-window.addEventListener('DOMContentLoaded', initApp);
+window.addEventListener('DOMContentLoaded', () => {
+    fetchData(searchQuery);
+});
 Appform_form.addEventListener('submit', displayResults);
 
-async function initApp(){
-    let ipData = await getData();
-    let latitude = ipData.location.lat;
-    let longitude = ipData.location.lng;
-    
-    updateUI(ipData);
-    createMap(ipData, latitude, longitude);
-}
-
 function displayResults(e){
+    e.preventDefault();
     const searchInput = document.querySelector('.form-input');
     const regexExpression = /\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}\b/;
 
@@ -31,7 +28,7 @@ function displayResults(e){
         console.log("You must enter a valid IP!");
     }
 
-    e.preventDefault();
+    fetchData(searchQuery);
 }
 
 
@@ -43,18 +40,37 @@ function updateUI(ipData){
 }
 
 function createMap(ipData, latitude, longitude){
-    const mymap = L.map(map_div).setView([`${latitude}`, `${longitude}`], 13);
     const tileURL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
     const tileAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
     const tiles = L.tileLayer(tileURL, { tileAttribution }); 
     tiles.addTo(mymap);
-    const marker = L.marker([`${latitude}`, `${longitude}`]).addTo(mymap);
+    marker.setLatLng([latitude, longitude]);
     marker.bindPopup(`<b>${ipData.ip}</b><br>${ipData.isp}`).openPopup();
+   
 }
 
-async function getData(){
-    const response = await fetch('https://geo.ipify.org/api/v1?apiKey=at_I0wAVnVG6QfdYJ0Bl7DKHogSqIQZ0');
-    const data = await response.json();
+async function fetchData(searchQuery){
+    let url;
 
-    return data;
+    if(searchQuery === undefined){
+        url = 'https://geo.ipify.org/api/v1?apiKey=at_I0wAVnVG6QfdYJ0Bl7DKHogSqIQZ0';
+    } else {
+        url = `https://geo.ipify.org/api/v1?apiKey=at_I0wAVnVG6QfdYJ0Bl7DKHogSqIQZ0&ipAddress=${searchQuery}`;
+    }
+
+    async function getResults(url){
+        const response = await fetch (url);
+        const data = await response.json();
+
+        return data;
+    }
+
+    
+    let ipData = await getResults(url);
+    let latitude = ipData.location.lat;
+    let longitude = ipData.location.lng;
+
+
+    updateUI(ipData);
+    createMap(ipData, latitude, longitude);
 }

@@ -6,44 +6,44 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Timezone App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     </head>
     <body>
         <section class="app">
             <header class="app__header">
-                <h1 class="app__header-title mb-small">Ip Adresss Tracker</h1>
+                <h1 class="app__header-title mb-medium">Ip Adresss Tracker</h1>
                 <form class="app__header-form">
-                    <input type="text" class="form-input" placeholder="Search for any IP adress or domain" autocomplete="off">
+                    <input type="text" class="form-input" placeholder="Search for any IP adress" autocomplete="off">
                     <button type="submit" class="submit-button">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </form>
+                <div class="app__content">
+                    <div class="app__content-card">
+                        <span class="card-title mb-small">Ip Adress</span>
+                        <h2 class="card-text mb-small" id="ip-adress"></h2>
+                    </div>
+                    <div class="app__content-card">
+                        <span class="card-title mb-small">Location</span>
+                        <h2 class="card-text mb-small" id="location"></h2>
+                    </div>
+                    <div class="app__content-card">
+                        <span class="card-title mb-small">Timezone</span>
+                        <h2 class="card-text mb-small" id="timezone"></h2>
+                    </div>
+                    <div class="app__content-card">
+                        <span class="card-title mb-small">ISP</span>
+                        <h2 class="card-text mb-small" id="isp"></h2>
+                    </div>
+                </div> 
             </header>
-            <div class="app__content">
-                <div class="app__content-card">
-                    <span class="card-title mb-small">Ip Adress</span>
-                    <h2 class="card-text" id="ip-adress"></h2>
-                </div>
-                <div class="app__content-card">
-                    <span class="card-title mb-small">Location</span>
-                    <h2 class="card-text" id="location"></h2>
-                </div>
-                <div class="app__content-card">
-                    <span class="card-title mb-small">Timezone</span>
-                    <h2 class="card-text" id="timezone"></h2>
-                </div>
-                <div class="app__content-card">
-                    <span class="card-title mb-small">ISP</span>
-                    <h2 class="card-text" id="isp"></h2>
-                </div>
-            </div>
             <div id="app__map"></div>
         </section>
 
