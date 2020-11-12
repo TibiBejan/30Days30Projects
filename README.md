@@ -13,3 +13,4 @@ Day 4 | Landing Page
 Day 5 | Password Generator
 Day 6 | PHP Login System
 Day 7 | PHP Gallery Upload
+Day 8 | Timezone App
