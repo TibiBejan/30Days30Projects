@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Loan Calculator</title>
+    <link rel="icon" type="image/png" href="icons8-calculator.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <section class="loan__calculator">
+        <h1 class="loan__calculator-heading">Loan Calculator</h1>
+        <form class="loan__calculator-form">
+            <div class="form-element">
+                <label class="label" for="amount">&dollar;</label>
+                <input type="number" id="amount" placeholder="Loan Amount" autocomplete="off">
+            </div>
+            <div class="form-element">
+                <label class="label" for="interest">&percnt;</label>
+                <input type="number" id="interest" placeholder="Annual Interest" autocomplete="off">
+            </div>
+            <div class="form-element">
+                <input type="number" id="years" placeholder="Repayment Years" autocomplete="off">
+            </div>
+            <input type="button" id="submit" value="Calculate" class="btn">
+        </form>
+
+        <!-- LOADER  -->
+        <div id="loading">
+            <img src="img/loading.gif" alt="gif">
+        </div>
+
+        <!-- RESULTS -->
+
+        <div class="loan__calculator-results">
+            <h3 class="sub-heading">Results</h3>
+            <form class="form-results">
+                <div class="form-element">
+                    <label class="label" for="monthly-payment">Monthly Payment</label>
+                    <input type="text" id="monthly-payment" class="form-input" value="" disabled>
+                </div>
+                <div class="form-element">
+                    <label class="label" for="total-payment">Total Payment</label>
+                    <input type="text" id="total-payment" class="form-input" disabled>
+                </div>
+                <div class="form-element">
+                    <label class="label" for="total-interest">Total Interest</label>
+                    <input type="text" id="total-interest" class="form-input" disabled>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
