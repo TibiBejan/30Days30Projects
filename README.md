@@ -16,3 +16,5 @@ Day 7 | PHP Gallery Upload
 Day 8 | Timezone App
 Day 9 | Social Media Dashboard
 Day 10 | Loan Calculator
+Day 11 | USA Population by city
+Day 12 | Pokedex
