@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 150rem;
+	max-width: 170rem;
 	width: 100%;
 	margin: 0 auto;
 	padding: 10rem 3rem;
@@ -10,7 +10,7 @@
 	.heading-one {
 		margin-bottom: 10rem;
 		font-size: 3rem;
-		font-weight: 600;
+		font-weight: 500;
 		letter-spacing: 0.2rem;
 	}
 
@@ -29,23 +29,23 @@
 
 	&__cards {
 		display: grid;
-		grid-template-columns: repeat(5, 20rem);
+		grid-template-columns: repeat(4, 35rem);
 		gap: 3rem;
 
-		@media screen and (max-width: 1200px) {
-			grid-template-columns: repeat(4, 20rem);
+		@media screen and (max-width: 1550px) {
+			grid-template-columns: repeat(3, 35rem);
 		}
 
-		@media screen and (max-width: 950px) {
-			grid-template-columns: repeat(3, 20rem);
+		@media screen and (max-width: 1150px) {
+			grid-template-columns: repeat(2, 35rem);
 		}
 
-		@media screen and (max-width: 550px) {
-			grid-template-columns: repeat(2, 20rem);
+		@media screen and (max-width: 650px) {
+			grid-template-columns: repeat(1, 45rem);
 		}
 
-		@media screen and (max-width: 340px) {
-			grid-template-columns: repeat(1, 30rem);
+		@media screen and (max-width: 360px) {
+			grid-template-columns: repeat(1, 40rem);
 		}
 	}
 }

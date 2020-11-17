@@ -1,61 +1,88 @@
-const pokemonNumbers = 200;
 const colors = {
-    fire: '#FDDFDF',
-	grass: '#DEFDE0',
-	electric: '#FCF7DE',
-	water: '#add8e6',
+    fire: '#da4a12',
+	grass: '#6ea95e',
+	electric: '#e0d443',
+	water: '#338ade',
 	ground: '#f4e7da',
 	rock: '#d5d5d4',
-	fairy: '#fceaff',
-	poison: '#98d7a5',
+	fairy: '#f9eaff',
+	poison: '#8dd6c1',
 	bug: '#f8d5a3',
 	dragon: '#97b3e6',
 	psychic: '#eaeda1',
-	flying: '#F5F5F5',
+	flying: '#e7f2f6',
 	fighting: '#E6E0D4',
     normal: '#FCE7FD',
     ice: '#b9e8ea',
-    dark: '#97A7A7'
+    dark: '#97A7A7',
+    ghost: '#333'
 };
 
-document.addEventListener('DOMContentLoaded', fetchPokemons);
 
+const pokemonCards_div = document.querySelector('.pokedex__cards');
 
-// FETCH DATA FROM API
-function fetchPokemons(){
+// EVENT LISTENTERS
+window.addEventListener('DOMContentLoaded', init);
 
+async function init(){
+    const pokemonArr = await fetchData();
     const promises = [];
-    for(let i = 1; i <= pokemonNumbers; i++){
+
+    for(let i = 1; i <= pokemonArr.length; i++){
         const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
-        promises.push(fetch(url).then(res => res.json()));
+        promises.push(fetch(url).then(response => response.json()));
     }
 
-    Promise.all(promises).then( results => {
-        const pokemon = results.map((data) => ({
+    Promise.all(promises).then(response => {
+        const pokemons = response.map(data => ({
             name: data.name[0].toUpperCase() + data.name.slice(1),
             id: data.id,
-            image: data.sprites['front_shiny'],
-            types: data.types.map(type => type.type.name),
+            hp: data.stats[0].base_stat,
+            image: `https://pokeres.bastionbot.org/images/pokemon/${data.id}.png`,
+            type: data.types[0].type.name,
+            height: data.height,
+            weight: data.weight,
+            abilities: data.abilities.map(ability => ability.ability.name).join(', '),
             color: colors[data.types[0].type.name]
         }));
 
-        displayPokemon(pokemon);
+        displayPokemons(pokemons);
     });
 }
 
-function displayPokemon(pokemon){
-    const pokemonCards_div = document.querySelector('.pokedex__cards');
 
-    const pokemonHTML = pokemon.map(poke => `
-        <div class="card" style="background-color: ${poke.color}">
-            <div class="card__image">
-                <img src="${poke.image}" alt="${poke.name}">
+function displayPokemons(pokemons){
+    const pokemonHTML = pokemons.map(poke => `
+        <div class="card">
+            <div class="card__info-top" style="background-image: linear-gradient(to bottom, #76d5ff, ${poke.color});">
+                <img src=${poke.image} alt="${poke.name}">                        
+                <div class="info">
+                    <span class="info-id">#${poke.id.toString().padStart(3, '0')}</span>
+                    <div class="info-hp">
+                        <i class="fas fa-heart"></i>
+                        <span class="hp-label">${poke.hp} HP</span>
+                    </div>
+                </div>
             </div>
-            <p class="card__id">${poke.id}</p>
-            <h3 class="heading-three">${poke.name}</h3>
-            <p class="card__type">type: ${poke.types}</p>
+            <h2 class="heading-two">${poke.name}</h2>
+            <h3 class="heading-three" style="color: ${poke.color}">${poke.type}</h3>
+            <div class="card__info-bottom">
+                <p class="paragraph"><span class="detail">Height: </span>${parseFloat(poke.height) * 10} <span class="detail">Weight: </span>${parseFloat(poke.weight) / 10}kg</p>
+                <p class="paragraph"><span class="detail">Abilities: </span>${poke.abilities}</p>
+            </div>
         </div>
     `).join('');
 
     pokemonCards_div.innerHTML = pokemonHTML;
+}
+
+
+
+async function fetchData(){
+    const url = `https://pokeapi.co/api/v2/pokemon/?limit=100`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    return data.results;
 }

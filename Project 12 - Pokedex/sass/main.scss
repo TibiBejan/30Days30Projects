@@ -3,5 +3,8 @@
 @import './2_base/reset';
 @import './2_base/base';
 
+@import './3_layout/header';
 @import './3_layout/pokedex';
 @import './3_layout/card';
+
+@import './4_components/card-info-top';
