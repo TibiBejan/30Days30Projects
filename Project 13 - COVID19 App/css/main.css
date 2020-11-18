@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+  font-weight: 300;
+  color: #24282f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #202329;
+  color: #fff;
+}
+
+.mb-small {
+  margin-bottom: 1rem;
+}
+
+.mb-medium {
+  margin-bottom: 2rem;
+}
+
+.mb-large {
+  margin-bottom: 4rem;
+}
+
+.confirmed {
+  color: #2969eb;
+}
+
+.active {
+  color: #f9bf2f;
+}
+
+.death {
+  color: #e3401b;
+}
+
+.recovered {
+  color: #3cb36f;
+}
+
+.heading-one {
+  max-width: 70%;
+  line-height: 1.5;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.heading-two {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.stats-value {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.stats {
+  width: 100%;
+  max-width: 170rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, calc(155rem / 6));
+  gap: 1rem;
+  padding: 5rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.stats__card {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #24282f;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.stats__card:hover {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.stats__card-search {
+  grid-column: 1 / span 3;
+  height: 40rem;
+}
+
+.stats__card-search .search-form {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.stats__card-search .search-form input {
+  display: block;
+  width: 40rem;
+  padding: 2rem;
+  background-color: #202329;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.stats__card-search .search-form .submit-button {
+  display: block;
+  margin-left: 2rem;
+  padding: 0 3rem;
+  background-color: #202329;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.stats__card-search .search-form .submit-button:hover {
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
+}
+
+.stats__card-search .error {
+  display: none;
+  width: 40rem;
+  padding: 1.5rem 2rem;
+  background-color: #202329;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.stats__card-search .error .paragraph {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3401b;
+}
+
+.stats .stats__card-donnutChart {
+  grid-column: 4 / span 3;
+  height: 40rem;
+}
+
+.stats .stats__card-donnutChart #donnut-chart {
+  padding: 2rem;
+}
+
+.stats .stats__card-totalCasesChart {
+  grid-column: 1 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalCasesChart #totalCases-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalActiveChart {
+  grid-column: 4 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalActiveChart #totalActive-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalRecoveredChart {
+  grid-column: 1 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalRecoveredChart #totalRecovered-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalDeathsChart {
+  grid-column: 4 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalDeathsChart #totalDeaths-chart {
+  padding: 1rem;
+}
+
+.stats .active {
+  display: block;
+}

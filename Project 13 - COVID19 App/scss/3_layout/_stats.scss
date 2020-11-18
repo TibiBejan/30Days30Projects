@@ -1,0 +1,140 @@
+.stats {
+	width: 100%;
+	max-width: 170rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(6, calc(155rem / 6));
+	gap: 1rem;
+	padding: 5rem;
+	align-items: center;
+	justify-items: center;
+
+	&__card {
+		width: 100%;
+		height: 20rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: $dark-color-1;
+		border-radius: 1rem;
+		box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+		cursor: pointer;
+		transition: 0.25s ease-in-out;
+	}
+
+	&__card:hover {
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+	}
+
+	&__card-search {
+		grid-column: 1 / span 3;
+		height: 40rem;
+
+		.search-form {
+			display: flex;
+			padding: 2rem 0;
+
+			input {
+				display: block;
+				width: 40rem;
+				padding: 2rem;
+				background-color: $dark-color-2;
+				border: none;
+				outline: none;
+				border-radius: 1rem;
+				box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $light-color-1;
+				text-align: center;
+			}
+
+			.submit-button {
+				display: block;
+				margin-left: 2rem;
+				padding: 0 3rem;
+				background-color: $dark-color-2;
+				border: none;
+				outline: none;
+				border-radius: 1rem;
+				box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $light-color-1;
+				text-align: center;
+				cursor: pointer;
+				transition: 0.25s ease-in-out;
+			}
+
+			.submit-button:hover {
+				box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
+			}
+		}
+
+		.error {
+			display: none;
+			width: 40rem;
+			padding: 1.5rem 2rem;
+			background-color: $dark-color-2;
+			border-radius: 1rem;
+			box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
+			text-align: center;
+
+			.paragraph {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $death-color;
+			}
+		}
+	}
+
+	.stats__card-donnutChart {
+		grid-column: 4 / span 3;
+		height: 40rem;
+
+		#donnut-chart {
+			padding: 2rem;
+		}
+	}
+
+	.stats__card-totalCasesChart {
+		grid-column: 1 / span 3;
+		height: 50rem;
+
+		#totalCases-chart {
+			padding: 1rem;
+		}
+	}
+
+	.stats__card-totalActiveChart {
+		grid-column: 4 / span 3;
+		height: 50rem;
+
+		#totalActive-chart {
+			padding: 1rem;
+		}
+	}
+
+	.stats__card-totalRecoveredChart {
+		grid-column: 1 / span 3;
+		height: 50rem;
+
+		#totalRecovered-chart {
+			padding: 1rem;
+		}
+	}
+
+	.stats__card-totalDeathsChart {
+		grid-column: 4 / span 3;
+		height: 50rem;
+
+		#totalDeaths-chart {
+			padding: 1rem;
+		}
+	}
+
+	.active {
+		display: block;
+	}
+}
