@@ -22,3 +22,59 @@
 	letter-spacing: 0.2rem;
 	text-transform: uppercase;
 }
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $death-color;
+}
+
+@media screen and (max-width: 1550px) {
+	.heading-two {
+		font-size: 1.25rem;
+	}
+
+	.stats-value {
+		font-size: 2.8rem;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.stats-value {
+		font-size: 2.4rem;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.heading-two {
+		font-size: 1.5rem;
+	}
+
+	.stats-value {
+		font-size: 3.5rem;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.heading-one {
+		font-size: 2rem;
+	}
+
+	.heading-two {
+		font-size: 1.1rem;
+	}
+
+	.stats-value {
+		font-size: 2.3rem;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.heading-two {
+		font-size: 1.4rem;
+	}
+
+	.stats-value {
+		font-size: 3rem;
+	}
+}

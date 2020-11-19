@@ -27,68 +27,6 @@
 		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
 	}
 
-	&__card-search {
-		grid-column: 1 / span 3;
-		height: 40rem;
-
-		.search-form {
-			display: flex;
-			padding: 2rem 0;
-
-			input {
-				display: block;
-				width: 40rem;
-				padding: 2rem;
-				background-color: $dark-color-2;
-				border: none;
-				outline: none;
-				border-radius: 1rem;
-				box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
-				font-size: 1.5rem;
-				font-weight: 600;
-				color: $light-color-1;
-				text-align: center;
-			}
-
-			.submit-button {
-				display: block;
-				margin-left: 2rem;
-				padding: 0 3rem;
-				background-color: $dark-color-2;
-				border: none;
-				outline: none;
-				border-radius: 1rem;
-				box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
-				font-size: 1.5rem;
-				font-weight: 600;
-				color: $light-color-1;
-				text-align: center;
-				cursor: pointer;
-				transition: 0.25s ease-in-out;
-			}
-
-			.submit-button:hover {
-				box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.6);
-			}
-		}
-
-		.error {
-			display: none;
-			width: 40rem;
-			padding: 1.5rem 2rem;
-			background-color: $dark-color-2;
-			border-radius: 1rem;
-			box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.6);
-			text-align: center;
-
-			.paragraph {
-				font-size: 1.5rem;
-				font-weight: 600;
-				color: $death-color;
-			}
-		}
-	}
-
 	.stats__card-donnutChart {
 		grid-column: 4 / span 3;
 		height: 40rem;
@@ -136,5 +74,128 @@
 
 	.active {
 		display: block;
+	}
+}
+
+@media screen and (max-width: 1750px) {
+	.stats {
+		max-width: 150rem;
+		grid-template-columns: repeat(6, calc(135rem / 6));
+	}
+}
+
+@media screen and (max-width: 1550px) {
+	.stats {
+		max-width: 135rem;
+		grid-template-columns: repeat(6, calc(120rem / 6));
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.stats {
+		max-width: 120rem;
+		grid-template-columns: repeat(6, calc(105rem / 6));
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.stats {
+		max-width: 100rem;
+		grid-template-columns: repeat(3, calc(90rem / 3));
+
+		.stats__card-donnutChart {
+			grid-column: 1 / span 3;
+			height: 55rem;
+		}
+
+		.stats__card-totalCasesChart {
+			grid-column: 1 / span 3;
+		}
+
+		.stats__card-totalActiveChart {
+			grid-column: 1 / span 3;
+		}
+
+		.stats__card-totalRecoveredChart {
+			grid-column: 1 / span 3;
+		}
+
+		.stats__card-totalDeathsChart {
+			grid-column: 1 / span 3;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.stats {
+		max-width: 80rem;
+		grid-template-columns: repeat(3, calc(70rem / 3));
+
+		.stats__card-donnutChart {
+			height: 40rem;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.stats {
+		max-width: 60rem;
+		grid-template-columns: repeat(3, calc(50rem / 3));
+
+		&__card {
+			height: 15rem;
+		}
+
+		.stats__card-totalCasesChart {
+			height: 35rem;
+		}
+
+		.stats__card-totalActiveChart {
+			height: 35rem;
+		}
+
+		.stats__card-totalRecoveredChart {
+			height: 35rem;
+		}
+
+		.stats__card-totalDeathsChart {
+			height: 35rem;
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.stats {
+		max-width: 45rem;
+		grid-template-columns: repeat(3, calc(35rem / 3));
+
+		&__card {
+			grid-column: 1 / span 3;
+			height: 15rem;
+		}
+
+		.stats__card-totalCasesChart {
+			height: 30rem;
+		}
+
+		.stats__card-totalActiveChart {
+			height: 30rem;
+		}
+
+		.stats__card-totalRecoveredChart {
+			height: 30rem;
+		}
+
+		.stats__card-totalDeathsChart {
+			height: 30rem;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.stats {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
 	}
 }

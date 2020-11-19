@@ -172,6 +172,57 @@ body {
   text-transform: uppercase;
 }
 
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e3401b;
+}
+
+@media screen and (max-width: 1550px) {
+  .heading-two {
+    font-size: 1.25rem;
+  }
+  .stats-value {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .stats-value {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .heading-two {
+    font-size: 1.5rem;
+  }
+  .stats-value {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .heading-one {
+    font-size: 2rem;
+  }
+  .heading-two {
+    font-size: 1.1rem;
+  }
+  .stats-value {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .heading-two {
+    font-size: 1.4rem;
+  }
+  .stats-value {
+    font-size: 3rem;
+  }
+}
+
 .stats {
   width: 100%;
   max-width: 170rem;
@@ -200,6 +251,162 @@ body {
 
 .stats__card:hover {
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.stats .stats__card-donnutChart {
+  grid-column: 4 / span 3;
+  height: 40rem;
+}
+
+.stats .stats__card-donnutChart #donnut-chart {
+  padding: 2rem;
+}
+
+.stats .stats__card-totalCasesChart {
+  grid-column: 1 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalCasesChart #totalCases-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalActiveChart {
+  grid-column: 4 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalActiveChart #totalActive-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalRecoveredChart {
+  grid-column: 1 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalRecoveredChart #totalRecovered-chart {
+  padding: 1rem;
+}
+
+.stats .stats__card-totalDeathsChart {
+  grid-column: 4 / span 3;
+  height: 50rem;
+}
+
+.stats .stats__card-totalDeathsChart #totalDeaths-chart {
+  padding: 1rem;
+}
+
+.stats .active {
+  display: block;
+}
+
+@media screen and (max-width: 1750px) {
+  .stats {
+    max-width: 150rem;
+    grid-template-columns: repeat(6, calc(135rem / 6));
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .stats {
+    max-width: 135rem;
+    grid-template-columns: repeat(6, calc(120rem / 6));
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .stats {
+    max-width: 120rem;
+    grid-template-columns: repeat(6, calc(105rem / 6));
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .stats {
+    max-width: 100rem;
+    grid-template-columns: repeat(3, calc(90rem / 3));
+  }
+  .stats .stats__card-donnutChart {
+    grid-column: 1 / span 3;
+    height: 55rem;
+  }
+  .stats .stats__card-totalCasesChart {
+    grid-column: 1 / span 3;
+  }
+  .stats .stats__card-totalActiveChart {
+    grid-column: 1 / span 3;
+  }
+  .stats .stats__card-totalRecoveredChart {
+    grid-column: 1 / span 3;
+  }
+  .stats .stats__card-totalDeathsChart {
+    grid-column: 1 / span 3;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .stats {
+    max-width: 80rem;
+    grid-template-columns: repeat(3, calc(70rem / 3));
+  }
+  .stats .stats__card-donnutChart {
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .stats {
+    max-width: 60rem;
+    grid-template-columns: repeat(3, calc(50rem / 3));
+  }
+  .stats__card {
+    height: 15rem;
+  }
+  .stats .stats__card-totalCasesChart {
+    height: 35rem;
+  }
+  .stats .stats__card-totalActiveChart {
+    height: 35rem;
+  }
+  .stats .stats__card-totalRecoveredChart {
+    height: 35rem;
+  }
+  .stats .stats__card-totalDeathsChart {
+    height: 35rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .stats {
+    max-width: 45rem;
+    grid-template-columns: repeat(3, calc(35rem / 3));
+  }
+  .stats__card {
+    grid-column: 1 / span 3;
+    height: 15rem;
+  }
+  .stats .stats__card-totalCasesChart {
+    height: 30rem;
+  }
+  .stats .stats__card-totalActiveChart {
+    height: 30rem;
+  }
+  .stats .stats__card-totalRecoveredChart {
+    height: 30rem;
+  }
+  .stats .stats__card-totalDeathsChart {
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stats {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .stats__card-search {
@@ -258,57 +465,19 @@ body {
   text-align: center;
 }
 
-.stats__card-search .error .paragraph {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #e3401b;
-}
-
-.stats .stats__card-donnutChart {
-  grid-column: 4 / span 3;
-  height: 40rem;
-}
-
-.stats .stats__card-donnutChart #donnut-chart {
-  padding: 2rem;
-}
-
-.stats .stats__card-totalCasesChart {
-  grid-column: 1 / span 3;
-  height: 50rem;
-}
-
-.stats .stats__card-totalCasesChart #totalCases-chart {
-  padding: 1rem;
-}
-
-.stats .stats__card-totalActiveChart {
-  grid-column: 4 / span 3;
-  height: 50rem;
-}
-
-.stats .stats__card-totalActiveChart #totalActive-chart {
-  padding: 1rem;
-}
-
-.stats .stats__card-totalRecoveredChart {
-  grid-column: 1 / span 3;
-  height: 50rem;
-}
-
-.stats .stats__card-totalRecoveredChart #totalRecovered-chart {
-  padding: 1rem;
-}
-
-.stats .stats__card-totalDeathsChart {
-  grid-column: 4 / span 3;
-  height: 50rem;
-}
-
-.stats .stats__card-totalDeathsChart #totalDeaths-chart {
-  padding: 1rem;
-}
-
-.stats .active {
+.stats__card-search .active {
   display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .stats__card-search {
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .stats__card-search .search-form input {
+    width: 25rem;
+    padding: 1.5rem;
+  }
 }
