@@ -2,7 +2,7 @@
 
 # 30 Days of Code
 
-# I took on this challenge on November 14th :date:
+# I took on this challenge on November 04th :date:
 
 Day | Project Name
 ------------ | -------------
