@@ -18,4 +18,6 @@ Day 9 | Social Media Dashboard
 Day 10 | Loan Calculator
 Day 11 | USA Population by city
 Day 12 | Pokedex
-Day 13 | COVID19 App
+Day 13 | Pokedex
+Day 14 | COVID19 App
+Day 15 | COVID19 App
