@@ -164,31 +164,6 @@ async function createCharts(targetData){
     const doughnutData = await targetData();
     const chartData = await targetData();
 
-    const chartOptions =  {
-        responsive: true,
-        title: {
-            display: true,
-            text: 'COVID19 CASES',
-            fontColor: '#fff'
-        },
-        legend: {
-            display: false
-        },
-        animation: {
-            animateScale: true,
-            animateRotate: true,
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    callback: function(value) {
-                        return numberWithCommas(value);
-                    }
-                }
-            }]
-        }
-    }
-
     Chart.defaults.global.defaultFontFamily = 'Lato';
     Chart.defaults.global.defaultFontSize = 16;
     Chart.defaults.global.defaultFontColor = '#999';
@@ -220,7 +195,25 @@ async function createCharts(targetData){
                 'Death Cases'
             ]
         },
-        option: chartOptions
+        option: {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
 
     // RESET TOTAL CASES CHART
@@ -239,7 +232,30 @@ async function createCharts(targetData){
             }],
             labels: chartData.dates
         },
-        options: chartOptions
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Coronavirus Total Cases',
+                fontColor: '#fff'
+            },
+            legend: {
+                display: false
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
 
     // RESET ACTIVE CASES CHART
@@ -258,7 +274,30 @@ async function createCharts(targetData){
             }],
             labels: chartData.dates
         },
-        options: chartOptions
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Coronavirus Active Cases',
+                fontColor: '#fff'
+            },
+            legend: {
+                display: false
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
 
     // RESET ACTIVE CASES CHART
@@ -277,7 +316,30 @@ async function createCharts(targetData){
             }],
             labels: chartData.dates
         },
-        options: chartOptions
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Coronavirus Recovered Cases',
+                fontColor: '#fff'
+            },
+            legend: {
+                display: false
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
 
     // RESET ACTIVE CASES CHART
@@ -296,7 +358,30 @@ async function createCharts(targetData){
             }],
             labels: chartData.dates
         },
-        options: chartOptions
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Coronavirus Death Cases',
+                fontColor: '#fff'
+            },
+            legend: {
+                display: false
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function(value) {
+                            return numberWithCommas(value);
+                        }
+                    }
+                }]
+            }
+        }
     });
 }
 
