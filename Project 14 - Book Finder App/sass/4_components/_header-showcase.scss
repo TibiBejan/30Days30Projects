@@ -1,0 +1,25 @@
+.header__showcase-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	#search-form {
+		width: 45rem;
+		display: flex;
+		align-items: center;
+
+		input {
+			width: 80%;
+			margin: 0;
+			padding: 1.5rem 2rem;
+			border: 0.2rem solid #fff;
+			border-top-left-radius: 1rem;
+			border-bottom-left-radius: 1rem;
+			outline: none;
+			font-size: 1.5rem;
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+}

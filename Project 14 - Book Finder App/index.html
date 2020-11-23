@@ -10,54 +10,26 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     </head>
     <body>
-
+        <header class="header">
+            <nav class="header__navbar">
+                <a href="index.html" class="header__navbar-logo">
+                    <i class="fas fa-book"></i>Books
+                </a>
+                <a href="#" class="header__navbar-github">Github</a>
+            </nav>
+            <div class="header__showcase">
+                <div class="header__showcase-content">
+                    <h1 class="heading-one mb-medium">Book Finder App</h1>
+                    <p class="header-paragraph mb-medium">The right place for you to find a book.</p>
+                    <form id="search-form">
+                        <input type="text" placeholder="Search for books..." autocomplete="off">
+                        <button type="submit" class="submit-button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </header>
         <section class="container">
-            <div class="container__navbar"></div>
-            <div class="container__content">
-                <div class="container__content-description">
-                    <div class="book-heading">
-                        <h1 class="heading-one book-title">Origin</h1>
-                        <p class="paragraph-primary book-author">By <span class="primary-color">Dan Brown</span></p>
-                        <p class="paragraph-primary book-publisher">Published by <span class="primary-color">Hachette UK</span></p>
-                        <span class="book-rating">
-                            <i class="far fa-star"></i>
-                        </span>
-                        <p class="paragraph-primary book-category">Fiction</p>
-                    </div>
-                    <div class="book-description">
-                        <p class="paragraph-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tempora sed eos in modi provident est, minima, voluptates aliquid itaque sit repudiandae consequuntur voluptatem. Officia nisi temporibus maxime delectus expedita quis, maiores ipsa saepe reprehenderit modi laudantium omnis itaque labore praesentium sunt architecto explicabo culpa voluptate ratione blanditiis? Culpa, veritatis? Qui accusamus officiis dolorum aliquam?</p>
-                        <a href="" class="button primary-button">
-                            <i class="far fa-eye"></i>Preview
-                        </a>
-                        <a href="" class="button secondary-button">
-                            <i class="fas fa-shopping-cart"></i>eBook
-                        </a>
-                    </div>
-                </div>
-                <div class="container__content-showcase">
-                    <img src="" alt="">
-                </div>
-            </div>
-            <div class="container__footer">
-                <h2 class="heading-two">More similar books</h2>
-                <div class="books">
-                    <div class="book">
-                        <img src="" alt="">
-                    </div>
-                    <div class="book">
-                        <img src="" alt="">
-                    </div>
-                    <div class="book">
-                        <img src="" alt="">
-                    </div>
-                    <div class="book">
-                        <img src="" alt="">
-                    </div>
-                    <div class="book">
-                        <img src="" alt="">
-                    </div>
-                </div>
-            </div>
+            
         </section>
         
         <script src="script.js"></script>
