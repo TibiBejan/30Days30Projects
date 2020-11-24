@@ -21,3 +21,23 @@
 	font-size: 1.5rem;
 	line-height: 1.5;
 }
+
+.modal-paragraph {
+	margin-bottom: 0.5rem;
+	font-size: 1.3rem;
+	font-weight: 400;
+	letter-spacing: 0.15rem;
+}
+
+.modal-paragraph-small {
+	text-align: justify;
+	font-size: 1.3rem;
+	letter-spacing: 0.15rem;
+}
+
+.modal-paragraph-small::first-letter {
+	font-size: 3rem;
+	font-weight: 600;
+	color: $primary-color;
+	padding-left: 1.5rem;
+}

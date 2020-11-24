@@ -16,6 +16,10 @@
 		background-color: $primary-color;
 		border-color: $primary-color;
 	}
+
+	@media screen and (max-width: 550px) {
+		width: 30%;
+	}
 }
 
 .primary-button {
