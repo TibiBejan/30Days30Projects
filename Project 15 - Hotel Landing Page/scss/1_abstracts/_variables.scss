@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+$showcase-font: 'Cinzel Decorative', cursive;
+$calligraphy-font: 'Parisienne', cursive;
+$primary-font: 'Roboto', sans-serif;
+
+// COLORS
+$primary-color-1: #ffa43e; // #c19b76
+$primary-color-2: #3a3138;
+
+$dark-color-1: #3b3b3b;
+$dark-color-2: #252525;
+$dark-color-3: #191919;
+
+$light-color-1: #fff;
+$light-color-2: #f8f8f8;
+
+$showcase-gradient: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+
+$element-transition: all 0.4s ease;
+$hover-transition: all 0.25s ease-in-out;

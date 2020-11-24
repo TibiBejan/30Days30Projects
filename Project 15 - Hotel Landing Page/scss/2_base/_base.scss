@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $primary-font;
+	font-weight: 300;
+	font-size: 62.5%;
+	color: $dark-color-3;
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 3rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 4rem;
+}

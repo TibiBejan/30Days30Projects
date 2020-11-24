@@ -1,0 +1,23 @@
+.heading-one {
+	font-family: $showcase-font;
+	font-size: 4rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	color: $light-color-1;
+	line-height: 1.5;
+}
+
+.heading-two {
+	position: relative;
+	font-size: 2rem;
+	color: $light-color-1;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.1rem;
+	color: $light-color-1;
+}

@@ -1,0 +1,26 @@
+.grid {
+	min-height: 100vh;
+	width: 100%;
+	grid-template-columns: [full-start] minmax(5rem, 1fr) [center-start] repeat(12, minmax(min-content, 12rem))
+		[center-end] minmax(5rem, 1fr) [full-end];
+	grid-template-rows: minmax(90vh, 90rem) repeat(2, min-content) repeat(2, minmax(60vh, 60rem)) repeat(3, min-content);
+}
+
+.header {
+	grid-column: full-start / full-end;
+	grid-row: 1 / 2;
+	background-image: $showcase-gradient, url('../../images/header-showcase.jpg');
+	background-size: cover;
+	background-position: top;
+
+	&__navbar {
+		height: 10rem;
+	}
+
+	&__showcase {
+		height: 80rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

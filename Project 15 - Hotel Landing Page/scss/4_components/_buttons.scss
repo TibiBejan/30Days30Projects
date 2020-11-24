@@ -1,0 +1,34 @@
+.primary-button {
+	@extend %buttons;
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	border: 0.25rem solid $primary-color-1;
+	color: $primary-color-1;
+
+	.fas {
+		display: inline-block;
+		margin-right: 1rem;
+		font-size: 2rem;
+	}
+
+	&:hover {
+		background-color: $primary-color-1;
+		color: $light-color-1;
+	}
+}
+
+.primary-button-light {
+	font-size: 1.5rem;
+	border: 0.25rem solid $light-color-1;
+	color: $light-color-1;
+
+	&:hover {
+		border-color: $primary-color-1;
+		background-color: $primary-color-1;
+		color: $light-color-1;
+	}
+}
