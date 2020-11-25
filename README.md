@@ -22,3 +22,6 @@ Day 13 | Pokedex
 Day 14 | COVID19 App
 Day 15 | COVID19 App
 Day 16 | Book Finder App
+Day 17 | Book Finder App
+Day 18 | Hotel Landing Page
+Day 19 | Hotel Landing Page
