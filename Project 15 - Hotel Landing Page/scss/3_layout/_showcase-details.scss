@@ -1,0 +1,42 @@
+.showcase-details {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&-card {
+		height: 35rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		padding: 0 5rem;
+
+		.showcase-icon {
+			width: 15rem;
+			height: 15rem;
+			border-radius: 50%;
+			border: 0.5rem solid $primary-color-2;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.heading-three-showcase {
+			transition: $hover-transition;
+		}
+	}
+
+	&-card:nth-child(2) {
+		border-left: 0.15rem dotted $dark-color-2;
+		border-right: 0.15rem dotted $dark-color-2;
+	}
+
+	&-card:hover .heading-three-showcase {
+		color: $primary-color-2;
+	}
+}

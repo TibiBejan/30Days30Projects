@@ -1,34 +1,67 @@
-.primary-button {
-	@extend %buttons;
-	display: flex;
-	align-items: center;
-	font-size: 1.3rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	border: 0.25rem solid $primary-color-1;
-	color: $primary-color-1;
+// .transparent-button {
+// 	@extend %buttons;
+// 	display: flex;
+// 	align-items: center;
+// 	border: 0.25rem solid $primary-color-1;
+// 	color: $primary-color-1;
 
-	.fas {
-		display: inline-block;
-		margin-right: 1rem;
-		font-size: 2rem;
-	}
+// 	.fas {
+// 		display: inline-block;
+// 		margin-right: 1rem;
+// 		font-size: 2rem;
+// 	}
+
+// 	&:hover {
+// 		background-color: $primary-color-1;
+// 		color: $light-color-1;
+// 	}
+// }
+
+// .transparent-button-light {
+// 	font-size: 1.5rem;
+// 	border: 0.25rem solid $light-color-1;
+// 	color: $light-color-1;
+
+// 	&:hover {
+// 		border-color: $primary-color-1;
+// 		background-color: $primary-color-1;
+// 		color: $light-color-1;
+// 	}
+// }
+
+.primary-button {
+	@extend %button;
+	background-color: $primary-color-2;
+	border-radius: 0.5rem;
 
 	&:hover {
 		background-color: $primary-color-1;
+	}
+}
+
+.light {
+	background-color: $light-color-1;
+	color: $dark-color-1;
+
+	&:hover {
+		background-color: $primary-color-2;
 		color: $light-color-1;
 	}
 }
 
-.primary-button-light {
-	font-size: 1.5rem;
-	border: 0.25rem solid $light-color-1;
-	color: $light-color-1;
+.arrow-button {
+	@extend %button;
+	width: 5rem;
+	height: 5rem;
+	padding: 0;
+	background-color: transparent;
+	border: 0.3rem solid $primary-color-2;
+	border-radius: 50%;
+	font-size: 2.5rem;
+	color: $primary-color-2;
 
 	&:hover {
-		border-color: $primary-color-1;
-		background-color: $primary-color-1;
+		background-color: $primary-color-2;
 		color: $light-color-1;
 	}
 }

@@ -11,49 +11,234 @@
     </head>
     <body class="grid">
         <header class="header">
-            <nav class="header__navbar">
-                <div class="header__navbar-wrapper">
-                    <div class="navbar-logo">
-                        <i class="fas fa-hotel"></i>
-                        <span class="logo-label">Hotel</span>
-                    </div>
-                    <ul class="navbar-links">
-                        <li class="list-item">
-                            <a href="index.html" class="navbar-link">Home</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="navbar-link">Rooms</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="navbar-link">Tours</a>
-                        </li>
-                        <li class="list-item">
-                            <a href="#" class="navbar-link">Contact</a>
-                        </li>
-                    </ul>
-                    <button type="button" class="button primary-button">
-                        <i class="fas fa-concierge-bell"></i>
-                        <span class="button-label">Book Now</span>
-                    </button>
-                    <div class="hamburger-toggler">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+            <div class="header__topbar">
+                <div class="header__topbar-logo">
+                    <img src="./images/hotel-logo-svg.svg" alt="Hotel Logo">
                 </div>
-            </nav>
-            <div class="header__showcase">
-                <div class="header__showcase-content">
-                    <h2 class="heading-two heading-two-calligraphy">Our favourite rooms</h2>
-                    <h1 class="heading-one mb-large">Hotel Master's Rooms</h1>
-                    <p class="paragraph mb-large">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus accusantium dignissimos sed error architecto minus.</p>
-                    <button type="button" class="button primary-button primary-button-light">Room Suites</button>
+                <button type="button" class="button primary-button">Book your stay</button>
+            </div>
+            <ul class="header__navbar">
+                <li class="list-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">About us</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Activities</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Rooms</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Blog</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Contact Us</a>
+                </li>
+            </ul>
+            <section class="header__showcase">
+                <h3 class="heading-three mb-xlarge">Best Choice for family</h3>
+                <h1 class="heading-one-showcase mb-xlarge">Come as a guest, leave as a friend</h1>
+                <button type="button" class="button primary-button light">
+                    <span class="button-label">Explore More</span>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+            </section>
+        </header>
+        
+        <section class="showcase-details">
+            <div class="showcase-details-card">
+                <div class="showcase-icon mb-large">
+                    <img src="./images/showcase-detail-1.jpg" alt="Forest Preview">
+                </div>
+                <h3 class="heading-three-showcase dark mb-large">Live amidst nature</h3>
+                <p class="paragraph dark">Feel and experience nature in its fullest glory to refresh yourself.</p>
+            </div>
+            <div class="showcase-details-card">
+                <div class="showcase-icon mb-large">
+                    <img src="./images/showcase-detail-2.jpg" alt="Homestay Preview">
+                </div>
+                <h3 class="heading-three-showcase dark mb-large">Heritage homestay</h3>
+                <p class="paragraph dark">Experience the charm of Kerala heritage that gave been preserved throughout the ages.</p>
+            </div>
+            <div class="showcase-details-card">
+                <div class="showcase-icon mb-large">
+                    <img src="./images/showcase-detail-3.jpg" alt="Family Preview">
+                </div>
+                <h3 class="heading-three-showcase dark mb-large">Family friendly</h3>
+                <p class="paragraph dark">The calm and confortable environment will make your family feel at home.</p>
+            </div>
+        </section>
+
+        <section class="chooseUs">
+            <div class="chooseUs__image">
+                <img src="./images/chooseUs-showcase-image.jpg" alt="Our guests room">
+            </div>
+            <div class="chooseUs__content">
+                <h2 class="heading-two-showcase mb-small">Why choose us</h2>
+                <h4 class="heading-four primary-text mb-xlarge">Some words about us</h4>
+                <p class="paragraph light-text mb-xlarge">We pride ourselves on a high standard of friendly cheerful service which cafers to the needs of the whole family.</p>
+                <div class="chooseUs__content-features">
+                    <div class="feature">
+                        <i class="fas fa-wifi"></i>
+                        <span class="feature-label">Free high speed wifi</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-couch"></i>
+                        <span class="feature-label">Well furnished rooms</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <span class="feature-label">Well equipped kitchen</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span class="feature-label">Swimming pool</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-parking"></i>
+                        <span class="feature-label">Parking</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-coffee"></i>
+                        <span class="feature-label">Free breakfast</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hamburger"></i>
+                        <span class="feature-label">Outdoor bbq Area</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-paw"></i>
+                        <span class="feature-label">Animals & Pets care</span>
+                    </div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <section class="">
+        <section class="testimonials">
+            <button type="button" class="button arrow-button" id="prevButton">
+                <i class="fas fa-long-arrow-alt-left"></i>
+            </button>
+            <div class="testimonials__wrapper">
+                <ul class="testimonials__wrapper-content">
+                    <li class="testimonial-slide current-slide">
+                        <ul class="testimonial-rating mb-xlarge">
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star-half-alt"></i></li>
+                        </ul>
+                        <h3 class="heading-three-testimonial dark mb-large">"If you are a lover of nature and appreciate its tranquility then this is the place for you."</h3>
+                        <div class="testimonial-profile-image mb-large">
+                            <img src="./images/testimonial-profile-picture-1.jpg" alt="User Profile Image">
+                        </div>
+                        <h3 class="heading-three-showcase dark mb-large">Eugene Powell</h3>
+                        <h4 class="heading-four-showcase primary-text ">Trip Advisor</h4>
+                    </li>
+                    <li class="testimonial-slide">
+                        <ul class="testimonial-rating mb-xlarge">
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="far fa-star"></i></li>
+                        </ul>
+                        <h3 class="heading-three-testimonial dark mb-large">"If you are a lover of nature and appreciate its tranquility then this is the place for you."</h3>
+                        <div class="testimonial-profile-image mb-large">
+                            <img src="./images/testimonial-profile-picture-2.jpg" alt="User Profile Image">
+                        </div>
+                        <h3 class="heading-three-showcase dark mb-large">Bryany Moore</h3>
+                        <h4 class="heading-four-showcase primary-text ">Trip Advisor</h4>
+                    </li>
+                    <li class="testimonial-slide">
+                        <ul class="testimonial-rating mb-xlarge">
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                        </ul>
+                        <h3 class="heading-three-testimonial dark mb-large">"If you are a lover of nature and appreciate its tranquility then this is the place for you."</h3>
+                        <div class="testimonial-profile-image mb-large">
+                            <img src="./images/testimonial-profile-picture-3.jpg" alt="User Profile Image">
+                        </div>
+                        <h3 class="heading-three-showcase dark mb-large">Jamilyn Barnes</h3>
+                        <h4 class="heading-four-showcase primary-text ">Trip Advisor</h4>
+                    </li>
+                    <li class="testimonial-slide">
+                        <ul class="testimonial-rating mb-xlarge">
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star"></i></li>
+                            <li class="testimonial-star"><i class="fas fa-star-half-alt"></i></li>
+                        </ul>
+                        <h3 class="heading-three-testimonial dark mb-large">"If you are a lover of nature and appreciate its tranquility then this is the place for you."</h3>
+                        <div class="testimonial-profile-image mb-large">
+                            <img src="./images/testimonial-profile-picture-4.jpg" alt="User Profile Image">
+                        </div>
+                        <h3 class="heading-three-showcase dark mb-large">Antonina Herrera</h3>
+                        <h4 class="heading-four-showcase primary-text ">Trip Advisor</h4>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="button arrow-button" id="nextButton">
+                <i class="fas fa-long-arrow-alt-right"></i>
+            </button>
+        </section>
 
+        <section class="activities">
+            <div class="activities__content">
+                <h2 class="heading-two-showcase dark mb-small">Things to do</h2>
+                <h4 class="heading-four primary-text mb-xlarge">All activities at the ami homestay</h4>
+                <p class="paragraph dark mb-xlarge">Besides the explosion of colour and life that characterises our summer, the Principality cordially invites you to enjoy many other experiences and activities during this season. R&R, culture, shopping, gastronomy… A true pleasure for the senses.</p>
+                <div class="activities__content-features mb-xlarge">
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <span class="feature-label">Outdoor bbq</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-fire"></i>
+                        <span class="feature-label">Campfire</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tree"></i>
+                        <span class="feature-label">Nature walk</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-campground"></i>
+                        <span class="feature-label">Outdoor adventure</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-water"></i>
+                        <span class="feature-label">Lake swimming</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-futbol"></i>
+                        <span class="feature-label">Games & Sports</span>
+                    </div>
+                </div>
+                <button type="button" class="button primary-button">
+                    <span class="button-label">Find out more</span>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+            </div>
+            <div class="activities__gallery">
+                <div class="activities__gallery-item">
+                    <img src="./images/activitiy-showcase-1.jpg" alt="Activity showcase image">
+                </div>
+                <div class="activities__gallery-item">
+                    <img src="./images/activitiy-showcase-2.jpg" alt="Activity showcase image">
+                </div>
+                <div class="activities__gallery-item">
+                    <img src="./images/activitiy-showcase-3.jpg" alt="Activity showcase image">
+                </div>
+                <div class="activities__gallery-item">
+                    <img src="./images/activitiy-showcase-4.jpg" alt="Activity showcase image">
+                </div>
+            </div>
         </section>
 
         <script src="script.js"></script>

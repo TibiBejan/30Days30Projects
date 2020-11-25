@@ -1,18 +1,54 @@
 .heading-one {
+	@extend %heading;
+	font-size: 3rem;
+}
+
+.heading-one-showcase {
+	@extend %heading;
+	font-size: 6rem;
 	font-family: $showcase-font;
-	font-size: 4rem;
-	font-weight: 600;
-	letter-spacing: 0.2rem;
-	color: $light-color-1;
-	line-height: 1.5;
+	font-weight: 400;
+	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
 .heading-two {
-	position: relative;
+	@extend %heading;
+	font-size: 3rem;
+}
+
+.heading-two-showcase {
+	@extend %heading;
+	font-family: $showcase-font;
+	font-size: 4rem;
+	font-weight: 400;
+}
+
+.heading-three {
+	@extend %heading;
 	font-size: 2rem;
-	color: $light-color-1;
-	line-height: 1.5;
-	text-transform: uppercase;
+}
+
+.heading-three-showcase {
+	@extend %heading;
+	font-size: 2rem;
+	font-family: $showcase-font;
+}
+
+.heading-three-testimonial {
+	@extend %heading;
+	font-size: 2rem;
+	font-family: $testimonial-font;
+}
+
+.heading-four {
+	@extend %heading;
+	font-size: 1.5rem;
+}
+
+.heading-four-showcase {
+	@extend %heading;
+	font-size: 1.5rem;
+	font-family: $showcase-font;
 }
 
 .paragraph {
@@ -20,4 +56,17 @@
 	font-weight: 400;
 	letter-spacing: 0.1rem;
 	color: $light-color-1;
+	line-height: 1.5;
+}
+
+.dark {
+	color: $dark-color-1;
+}
+
+.light-text {
+	color: $light-color-3;
+}
+
+.primary-text {
+	color: $primary-color-2;
 }

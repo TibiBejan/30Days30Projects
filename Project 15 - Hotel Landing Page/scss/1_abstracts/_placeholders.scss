@@ -1,9 +1,22 @@
-%buttons {
+%button {
 	display: inline-block;
 	outline: none;
 	border: none;
 	padding: 1.5rem 3rem;
 	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
 	color: $light-color-1;
 	transition: $hover-transition;
+}
+
+%heading {
+	font-family: $primary-font;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	color: $light-color-1;
+	line-height: 1.5;
+	text-transform: uppercase;
 }
