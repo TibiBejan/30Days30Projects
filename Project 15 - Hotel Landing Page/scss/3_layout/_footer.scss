@@ -1,0 +1,101 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10rem 0;
+	background-color: $primary-color-1;
+
+	&__logo {
+		margin-bottom: 7rem;
+	}
+
+	&__info {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(30rem, 40rem));
+		margin-bottom: 7rem;
+
+		&-block {
+			padding: 0 5rem;
+
+			.footer__info-links {
+				display: flex;
+				flex-direction: column;
+
+				.list-item {
+					margin: 2rem 0;
+
+					.footer-link {
+						font-size: 1.5rem;
+						color: $light-color-3;
+						transition: $hover-transition;
+
+						&:hover {
+							color: $primary-color-2;
+						}
+					}
+				}
+			}
+		}
+
+		&-block:nth-child(2) {
+			border-left: 0.15rem solid $light-color-3;
+			border-right: 0.15rem solid $light-color-3;
+		}
+	}
+
+	&__social-media {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(30rem, 40rem));
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 7rem;
+		padding: 3rem 0;
+		border-top: 0.15rem solid $light-color-3;
+		border-bottom: 0.15rem solid $light-color-3;
+
+		@media screen and (max-width: $bp-mobileLarge) {
+			grid-template-columns: 1fr;
+		}
+
+		.email-form {
+			display: flex;
+			align-items: center;
+
+			@media screen and (max-width: $bp-mobileLarge) {
+				margin: 2rem auto;
+			}
+
+			.form-input {
+				width: 25rem;
+				padding: 1.5rem;
+				background-color: $dark-color-2;
+				border-radius: 1rem;
+				font-size: 1.5rem;
+				text-align: center;
+				color: $light-color-3;
+			}
+		}
+
+		.social-links .social-link {
+			display: inline-block;
+			margin: 0 1rem;
+
+			a {
+				font-size: 2.5rem;
+				color: $light-color-3;
+				transition: $hover-transition;
+			}
+
+			a:hover {
+				color: $primary-color-2;
+			}
+		}
+	}
+
+	&__copyright {
+		font-size: 1.7rem;
+		font-weight: 400;
+	}
+}

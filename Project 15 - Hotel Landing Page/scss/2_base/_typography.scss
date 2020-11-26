@@ -11,6 +11,13 @@
 	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
 }
 
+.heading-one-testimonial {
+	@extend %heading;
+	font-size: 6rem;
+	font-family: $testimonial-font;
+	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+}
+
 .heading-two {
 	@extend %heading;
 	font-size: 3rem;
@@ -69,4 +76,8 @@
 
 .primary-text {
 	color: $primary-color-2;
+}
+
+.light-font {
+	font-weight: 300;
 }

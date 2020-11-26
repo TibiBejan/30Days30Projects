@@ -1,0 +1,25 @@
+.parallax-banner {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('../../images/Holiday-activitiy-showcase.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	.heading-one-showcase {
+		max-width: 50%;
+	}
+
+	&-rating {
+		display: flex;
+		align-items: center;
+
+		.rating-star {
+			margin: 0 0.5rem;
+		}
+
+		.rating-star i {
+			font-size: 3rem;
+			color: $light-color-1;
+		}
+	}
+}

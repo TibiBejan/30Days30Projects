@@ -6,6 +6,16 @@
 	padding: 0 10rem;
 	background-color: $light-color-2;
 
+	@media screen and (max-width: $bp-desktopSize) {
+		padding: 0 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		justify-items: center;
+		text-align: center;
+		padding: 5rem 10rem;
+	}
+
 	.paragraph {
 		max-width: 70%;
 		font-weight: 300;
@@ -18,11 +28,23 @@
 		column-gap: 10rem;
 		row-gap: 5rem;
 
+		@media screen and (max-width: $bp-desktopSize) {
+			column-gap: 5rem;
+		}
+
+		@media screen and (max-width: $bp-laptopSize) {
+			column-gap: 3rem;
+		}
+
 		.feature {
 			display: grid;
-			grid-template-columns: 5rem max-content;
+			grid-template-columns: 5rem minmax(min-content, 1fr);
 			align-items: center;
 			column-gap: 2rem;
+
+			@media screen and (max-width: $bp-laptopSize) {
+				column-gap: 0.5rem;
+			}
 
 			i {
 				font-size: 3rem;
@@ -50,9 +72,17 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
 
+	@media screen and (max-width: $bp-mobileMedium) {
+		grid-template-columns: 1fr;
+	}
+
 	&-item {
 		position: relative;
 		box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+
+		@media screen and (max-width: $bp-mobileMedium) {
+			height: 70rem;
+		}
 
 		img {
 			width: 100%;

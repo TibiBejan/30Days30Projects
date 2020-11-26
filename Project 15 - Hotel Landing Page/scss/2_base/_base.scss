@@ -11,6 +11,10 @@ html {
 	font-weight: 300;
 	font-size: 62.5%;
 	color: $dark-color-1;
+
+	@media screen and (max-width: $bp-mobileMedium) {
+		font-size: 50%;
+	}
 }
 
 .mb-small {
