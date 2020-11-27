@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AMI Homestay</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body class="grid">
+        <!-- HEADER -->
+        <header class="header header-secondary">
+            <div class="header__topbar">
+                <div class="header__topbar-logo">
+                    <img src="./images/hotel-logo-svg.svg" alt="Hotel Logo">
+                </div>
+                <button type="button" class="button primary-button">Book your stay</button>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <ul class="header__navbar">
+                <li class="list-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">About us</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Activities</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Rooms</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Blog</a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="navbar-link">Contact Us</a>
+                </li>
+            </ul>
+            <section class="header__showcase header__showcase-small">
+                <h1 class="heading-one-showcase">Contact</h1>
+                <h3 class="heading-three mb-xlarge">Ami homestay</h3>
+            </section>
+        </header>
+        
+        <section class="contact">
+            <h2 class="heading-two-showcase dark">How to find us</h2>
+            <div class="contact__cards">
+                <div class="contact__cards-card">
+                    <div class="card-icon mb-medium">
+                        <i class="fas fa-location-arrow"></i>
+                    </div>
+                    <h3 class="heading-three-showcase dark mb-medium">Location</h3>
+                    <p class="paragraph dark light-font">44 Shirley Ave. West Chicago, New York, USA</p>
+                </div>
+                <div class="contact__cards-card">
+                    <div class="card-icon mb-medium">
+                        <i class="fas fa-phone-square-alt"></i>
+                    </div>
+                    <h3 class="heading-three-showcase dark mb-medium">Phone Us</h3>
+                    <p class="paragraph dark light-font">+(84) 004 130 0555</p>
+                    <p class="paragraph dark light-font">+(84) 004 130 0888</p>
+                </div>
+                <div class="contact__cards-card">
+                    <div class="card-icon mb-medium">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3 class="heading-three-showcase dark mb-medium">Email Us</h3>
+                    <p class="paragraph dark light-font">info@example.com</p>
+                    <p class="paragraph dark light-font">support@example.com</p>
+                </div>
+            </div>
+            <div class="contact__map" id="map"></div>
+        </section>
+
+        <section class="questions">
+            <h2 class="heading-two-showcase dark mb-xlarge">Have any questions?</h2>
+            <p class="paragraph dark mb-xlarge">Subscribe to our newsletters, call us to book a meetup or send us emails to request for service consultation.</p>
+            <form class="questions__form">
+                <div class="questions__form-element">
+                    <label for="name" class="label-showcase">Your Name*</label>
+                    <input type="text" placeholder="Complete name" id="name" class="form-input">
+                </div>
+                <div class="questions__form-element">
+                    <label for="email" class="label-showcase">Your Email*</label>
+                    <input type="text" placeholder="example@email.com" id="email" class="form-input">
+                </div>
+                <div class="questions__form-element">
+                    <label for="phone" class="label-showcase">Your Phone Number*</label>
+                    <input type="text" placeholder="Phone Number" id="phone" class="form-input">
+                </div>
+                <div class="questions__form-element">
+                    <label for="subject" class="label-showcase">Subject</label>
+                    <input type="text" placeholder="Service Name" id="subject" class="form-input">
+                </div>
+                <div class="questions__form-element ">
+                    <label for="message" class="label-showcase">Your Message</label>
+                    <textarea placeholder="Text Here" id="message" class="form-input"></textarea>
+                </div>
+                <button type="submit" class="button primary-button">Post Comment</button>
+            </form>
+        </section>
+
+         <!-- FOOTER -->
+         <footer class="footer">
+            <div class="footer__logo">
+                <img src="./images/logo-footer.png" alt="Homestay Logo">
+            </div>
+            <div class="footer__info">
+                <div class="footer__info-block">
+                    <h4 class="heading-four-showcase mb-xlarge">About Us</h4>
+                    <ul class="footer__info-links">
+                        <li class="list-item">
+                            <a href="#activities" class="footer-link">Things To Do</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#services" class="footer-link">Services</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="footer-link">Meet Our Team</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="contact.html" class="footer-link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__info-block">
+                    <h4 class="heading-four-showcase mb-xlarge">Information</h4>
+                    <p class="paragraph light-text mb-medium">7882 Longbranch Rd Wooster, New York</p>
+                    <h4 class="heading-four mb-medium">Call for reservations</h4>
+                    <h2 class="heading-two primary-text mb-medium">+84 4130 0555</h2>
+                    <a href="#" class="button transparent-button">
+                        <span class="button-label">View Map</span>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                    </a>
+                </div>
+                <div class="footer__info-block">
+                    <h4 class="heading-four-showcase mb-xlarge">Quick Links</h4>
+                    <ul class="footer__info-links">
+                        <li class="list-item">
+                            <a href="#" class="footer-link">Ammenities</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#" class="footer-link">Pricing</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#testimonials" class="footer-link">Testimonials</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="#blog-posts" class="footer-link">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__social-media">
+                <h4 class="heading-four-showcase light-font">Don't miss our latest updates</h4>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter Your Email..." class="form-input">
+                    <button type="submit" class="button primary-button light">
+                        <span class="button-label">Submit</span>
+                        <i class="far fa-paper-plane"></i>
+                    </button>
+                </form>
+                <ul class="social-links">
+                    <li class="social-link">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="social-link">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="footer__copyright light-text">Copyright &copy; 2020.All Rights Reserved</p>
+        </footer>
+
+        <script src="script.js"></script>
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciubiCMMs4C-KcusUZV25pjBAY-rtJPU&callback=initMap">
+        </script>
+
+    </body>
+</html>

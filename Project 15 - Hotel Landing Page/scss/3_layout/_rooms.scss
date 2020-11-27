@@ -7,11 +7,11 @@
 	grid-template-columns: repeat(3, minmax(30rem, 50rem));
 	gap: 5rem;
 
-	@media screen and (max-width: $bp-mobileLarge) {
+	@media screen and (max-width: $bp-tabletSize) {
 		grid-template-columns: repeat(2, minmax(30rem, 50rem));
 	}
 
-	@media screen and (max-width: $bp-mobileMedium) {
-		grid-template-columns: 1fr;
+	@media screen and (max-width: $bp-tabletSmall) {
+		grid-template-columns: minmax(30rem, 60rem);
 	}
 }

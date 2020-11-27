@@ -1,0 +1,50 @@
+.questions__form {
+	width: 100%;
+	max-width: 90rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+
+	&-element {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		text-align: start;
+
+		@media screen and (max-width: $bp-tabletSmall) {
+			grid-column: 1 / -1;
+		}
+	}
+
+	&-element .label-showcase {
+		margin-bottom: 1.5rem;
+	}
+
+	&-element .form-input {
+		padding: 1.5rem 2rem;
+		border: 0.15rem solid $light-color-4;
+		border-radius: 0.5rem;
+		background-color: $light-color-1;
+		font-size: 1.7rem;
+		transition: $element-transition;
+	}
+
+	&-element .form-input:focus {
+		border-color: $primary-color-2;
+	}
+
+	&-element:last-of-type {
+		grid-column: 1 / -1;
+		width: 100%;
+
+		.form-input {
+			resize: vertical;
+			min-height: 15rem;
+			max-height: 30rem;
+		}
+	}
+
+	.primary-button {
+		grid-column: 1 / -1;
+	}
+}

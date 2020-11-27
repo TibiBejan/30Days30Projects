@@ -74,3 +74,18 @@ function moveToTargetSlide(currentSlide, targetSlide){
     targetSlide.classList.add('current-slide');
 }
 
+// GOOGLE MAP
+let map;
+
+function initMap() {
+    const myLocation = { lat: 40.785091, lng: -73.968285 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: myLocation,
+      zoom: 12,
+    });
+    const marker = new google.maps.Marker({
+        position: myLocation,
+        map: map,
+    }); 
+}
+  

@@ -9,6 +9,14 @@
 	font-family: $showcase-font;
 	font-weight: 400;
 	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+
+	@media screen and (max-width: $bp-tabletSize) {
+		font-size: 4rem;
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
+		font-size: 3rem;
+	}
 }
 
 .heading-one-testimonial {
@@ -16,6 +24,10 @@
 	font-size: 6rem;
 	font-family: $testimonial-font;
 	text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+
+	@media screen and (max-width: $bp-tabletSize) {
+		font-size: 4rem;
+	}
 }
 
 .heading-two {
@@ -28,11 +40,23 @@
 	font-family: $showcase-font;
 	font-size: 4rem;
 	font-weight: 400;
+
+	@media screen and (max-width: $bp-smartPhone) {
+		font-size: 3rem;
+	}
 }
 
 .heading-three {
 	@extend %heading;
 	font-size: 2rem;
+
+	@media screen and (max-width: $bp-tabletSize) {
+		font-size: 1.6rem;
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
+		font-size: 1.2rem;
+	}
 }
 
 .heading-three-showcase {
@@ -45,6 +69,10 @@
 	@extend %heading;
 	font-size: 2rem;
 	font-family: $testimonial-font;
+
+	@media screen and (max-width: $bp-tabletSize) {
+		font-size: 1.3rem;
+	}
 }
 
 .heading-four {
@@ -64,6 +92,14 @@
 	letter-spacing: 0.1rem;
 	color: $light-color-1;
 	line-height: 1.5;
+}
+
+.label-showcase {
+	font-family: $testimonial-font;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
 }
 
 .dark {

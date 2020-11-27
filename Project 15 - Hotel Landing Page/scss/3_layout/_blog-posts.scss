@@ -3,12 +3,12 @@
 	grid-template-columns: repeat(3, minmax(30rem, 50rem));
 	gap: 5rem;
 
-	@media screen and (max-width: $bp-mobileLarge) {
+	@media screen and (max-width: $bp-laptopSize) {
 		grid-template-columns: repeat(2, minmax(30rem, 50rem));
 	}
 
-	@media screen and (max-width: $bp-mobileMedium) {
-		grid-template-columns: 1fr;
+	@media screen and (max-width: $bp-tabletSmall) {
+		grid-template-columns: minmax(30rem, 60rem);
 	}
 
 	.post {
@@ -26,18 +26,8 @@
 			padding: 3rem;
 		}
 
-		@media screen and (max-width: $bp-mobileLarge) {
+		@media screen and (max-width: $bp-tabletSmall) {
 			height: 40rem;
-		}
-
-		@media screen and (max-width: $bp-mobileMedium) {
-			align-items: center;
-			text-align: center;
-
-			.heading-three-showcase,
-			.paragraph {
-				max-width: 70%;
-			}
 		}
 	}
 
@@ -54,13 +44,13 @@
 		background-position: center;
 		background-repeat: no-repeat;
 
+		.post__details .date {
+			color: $light-color-3;
+		}
+
 		@media screen and (max-width: $bp-laptopSize) {
 			height: 50rem;
 			padding: 3rem;
-		}
-
-		@media screen and (max-width: $bp-mobileLarge) {
-			height: 40rem;
 		}
 	}
 

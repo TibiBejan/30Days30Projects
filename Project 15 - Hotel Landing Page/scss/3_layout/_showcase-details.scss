@@ -1,8 +1,21 @@
 .showcase-details {
 	display: grid;
-	grid-template-columns: repeat(3, minmax(30rem, 40rem));
+	grid-template-columns: repeat(3, minmax(25rem, 40rem));
 	gap: 5rem;
 	align-items: center;
+
+	@media screen and (max-width: $bp-tabletSize) {
+		grid-template-columns: repeat(2, minmax(25rem, 40rem));
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		margin: 0 auto;
+		grid-template-columns: minmax(30rem, 60rem);
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
+		grid-template-columns: 1fr;
+	}
 
 	&-card {
 		height: 45rem;
@@ -11,13 +24,18 @@
 		align-items: center;
 		justify-content: space-between;
 		text-align: center;
-		padding: 5rem;
+		padding: 3rem;
 		background-color: $light-color-1;
 		border: 0.5rem solid $light-color-3;
 		transition: $hover-transition;
 
-		@media screen and (max-width: $bp-laptopSize) {
-			height: 50rem;
+		@media screen and (max-width: $bp-tabletSmall) {
+			height: 35rem;
+			justify-content: center;
+		}
+
+		@media screen and (max-width: $bp-smartPhone) {
+			height: 40rem;
 		}
 
 		.showcase-icon {

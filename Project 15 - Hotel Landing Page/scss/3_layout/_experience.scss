@@ -12,6 +12,10 @@
 	.paragraph {
 		max-width: 60%;
 	}
+
+	@media screen and (max-width: $bp-tabletSize) {
+		height: 40rem;
+	}
 }
 
 .experience__box:first-child {

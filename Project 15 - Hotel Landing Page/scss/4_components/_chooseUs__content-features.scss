@@ -11,6 +11,13 @@
 
 	@media screen and (max-width: $bp-laptopSize) {
 		column-gap: 3rem;
+		max-width: 100%;
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	.feature {
@@ -20,7 +27,7 @@
 		column-gap: 2rem;
 
 		@media screen and (max-width: $bp-laptopSize) {
-			column-gap: 0.5rem;
+			grid-template-columns: repeat(2, minmax(min-content, max-content));
 		}
 
 		i {

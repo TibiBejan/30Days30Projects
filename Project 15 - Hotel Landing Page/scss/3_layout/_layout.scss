@@ -8,10 +8,10 @@
 	background-repeat: repeat;
 }
 
-.header {
+.header,
+.header-secondary {
 	height: 65vw;
 	grid-column: 2 / span 12;
-	grid-row: 1 / 2;
 
 	@media screen and (max-width: $bp-desktopLarge) {
 		grid-column: 1 / -1;
@@ -21,21 +21,44 @@
 		height: 100vw;
 	}
 
-	@media screen and (max-width: $bp-tabletSmall) {
+	@media screen and (max-width: $bp-tabletSize) {
 		height: 100rem;
+	}
+}
+
+.header-secondary {
+	height: 60rem;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		height: 50rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSize) {
+		height: 50rem;
 	}
 }
 
 .showcase-details {
 	grid-column: 4 / 12;
-	grid-row: 2 / 3;
-	padding: 15rem 0;
+	padding: 15rem 0rem;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+		padding: 15rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
+		padding: 10rem 2rem;
+	}
 }
 
 .chooseUs {
 	height: 80rem;
 	grid-column: 2 / span 12;
-	grid-row: 3 / 4;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
@@ -43,26 +66,33 @@
 		grid-column: 1 / -1;
 	}
 
-	@media screen and (max-width: $bp-tabletSmall) {
-		height: auto;
+	@media screen and (max-width: $bp-tabletSize) {
 		grid-template-columns: 1fr;
+		height: auto;
 	}
 }
 
 .testimonials {
 	height: 65rem;
 	grid-column: 4 / 12;
-	grid-row: 4 / 5;
-	padding: 10rem 0;
+	padding: 10rem 0rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+		padding: 10rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 2rem;
+	}
 }
 
 .activities {
 	height: 80rem;
 	grid-column: 2 / span 12;
-	grid-row: 5 / 6;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
@@ -70,26 +100,32 @@
 		grid-column: 1 / -1;
 	}
 
-	@media screen and (max-width: $bp-tabletSmall) {
-		height: auto;
+	@media screen and (max-width: $bp-tabletSize) {
 		grid-template-columns: 1fr;
+		height: auto;
 	}
 }
 
 .attractions {
 	grid-column: 4 / 12;
-	grid-row: 6 / 7;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	padding: 15rem 0;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 2rem;
+	}
 }
 
 .parallax-banner {
 	height: 50rem;
 	grid-column: 2 / span 12;
-	grid-row: 7 / 8;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -99,21 +135,33 @@
 	@media screen and (max-width: $bp-desktopLarge) {
 		grid-column: 1 / -1;
 	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 0 3rem;
+	}
 }
 
 .rooms {
 	grid-column: 4 / 12;
-	grid-row: 8 / 9;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding: 15rem 0;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+		padding: 15rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 2rem;
+		text-align: center;
+	}
 }
 
 .experience {
 	height: 50rem;
 	grid-column: 2 / span 12;
-	grid-row: 9 / 10;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 5rem;
@@ -122,28 +170,59 @@
 		grid-column: 1 / -1;
 	}
 
-	@media screen and (max-width: $bp-mobileLarge) {
-		height: 70rem;
+	@media screen and (max-width: $bp-tabletSize) {
 		grid-template-columns: 1fr;
-		gap: 3rem;
+		height: auto;
+		gap: 2rem;
 	}
 }
 
 .blog-posts {
 	grid-column: 4 / 12;
-	grid-row: 10 / 11;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
 	padding: 10rem 0;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+		padding: 10rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 2rem;
+	}
 }
 
 .footer {
 	grid-column: 2 / span 12;
-	grid-row: 11 / 12;
 
 	@media screen and (max-width: $bp-desktopLarge) {
 		grid-column: 1 / -1;
+	}
+}
+
+// CONTACT PAGE
+.contact {
+	grid-column: 2 / span 12;
+	padding-top: 15rem;
+
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-column: 1 / -1;
+	}
+}
+
+.questions {
+	grid-column: 2 / span 12;
+	padding: 15rem 0;
+
+	@media screen and (max-width: $bp-tabletSize) {
+		grid-column: 1 / -1;
+		padding: 10rem 5rem;
+	}
+
+	@media screen and (max-width: $bp-tabletSmall) {
+		padding: 10rem 2rem;
 	}
 }

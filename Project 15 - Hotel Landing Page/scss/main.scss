@@ -8,6 +8,7 @@
 @import './2_base/typography';
 
 // LAYOUT
+// INDEX PAGE LAYOUT COMPONENTS
 @import './3_layout/layout';
 @import './3_layout/header';
 @import './3_layout/showcase-details';
@@ -20,12 +21,14 @@
 @import './3_layout/experience';
 @import './3_layout/blog-posts';
 @import './3_layout/footer';
+// CONTACT PAGE LAYOUT COMPONENTS
+@import './3_layout/contact';
+@import './3_layout/questions';
 
 // COMPONENTS
 @import './4_components/buttons';
 // HEADER COMPONENTS
 @import './4_components/hamburger-toggler';
-@import './4_components/navbar-links';
 @import './4_components/responsive-header__topbar';
 @import './4_components/responsive-header__navbar';
 // CHOOSE US COMPONENTS
@@ -40,3 +43,6 @@
 // FOOTER COMPONENTS
 @import './4_components/footer__info-block';
 @import './4_components/footer__social-media';
+
+// CONTACT PAGE COMPONENTS
+@import './4_components/questions__form';

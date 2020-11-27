@@ -3,6 +3,7 @@
 	grid-template-rows: repeat(4, min-content);
 	align-content: center;
 	justify-items: self-start;
+
 	padding: 0 10rem;
 	background-color: $light-color-2;
 
@@ -10,15 +11,28 @@
 		padding: 0 5rem;
 	}
 
-	@media screen and (max-width: $bp-tabletSmall) {
+	@media screen and (max-width: $bp-laptopSize) {
+		padding: 0 2rem;
 		justify-items: center;
+	}
+
+	@media screen and (max-width: $bp-tabletSize) {
+		padding: 10rem 2rem;
 		text-align: center;
-		padding: 5rem 10rem;
 	}
 
 	.paragraph {
 		max-width: 70%;
 		font-weight: 300;
+
+		@media screen and (max-width: $bp-laptopSize) {
+			max-width: 90%;
+			text-align: center;
+		}
+
+		@media screen and (max-width: $bp-tabletSize) {
+			max-width: 60%;
+		}
 	}
 }
 
@@ -27,7 +41,11 @@
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1rem;
 
-	@media screen and (max-width: $bp-mobileMedium) {
+	@media screen and (max-width: $bp-laptopSize) {
+		grid-template-columns: repeat(2, minmax(10rem, 1fr));
+	}
+
+	@media screen and (max-width: $bp-smartPhone) {
 		grid-template-columns: 1fr;
 	}
 }
