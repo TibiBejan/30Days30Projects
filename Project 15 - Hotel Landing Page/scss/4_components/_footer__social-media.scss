@@ -1,0 +1,33 @@
+.footer__social-media .email-form {
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: $bp-mobileLarge) {
+		margin: 2rem auto;
+	}
+
+	.form-input {
+		width: 25rem;
+		padding: 1.5rem;
+		background-color: $dark-color-2;
+		border-radius: 1rem;
+		font-size: 1.5rem;
+		text-align: center;
+		color: $light-color-3;
+	}
+}
+
+.footer__social-media .social-links .social-link {
+	display: inline-block;
+	margin: 0 1rem;
+
+	a {
+		font-size: 2.5rem;
+		color: $light-color-3;
+		transition: $hover-transition;
+	}
+
+	a:hover {
+		color: $primary-color-2;
+	}
+}

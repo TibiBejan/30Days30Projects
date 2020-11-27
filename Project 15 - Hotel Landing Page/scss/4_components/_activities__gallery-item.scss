@@ -1,0 +1,66 @@
+.activities__gallery-item {
+	position: relative;
+	box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
+
+	@media screen and (max-width: $bp-mobileMedium) {
+		height: 70rem;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: $hover-transition;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		font-family: $showcase-font;
+		font-size: 2rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		color: $light-color-1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		pointer-events: none;
+		transition: $hover-transition;
+		z-index: 10;
+	}
+
+	&:nth-child(1)::before {
+		content: 'Outdoor bbq';
+	}
+	&:nth-child(2)::before {
+		content: 'Nature Walk';
+	}
+	&:nth-child(3)::before {
+		content: 'Lake swimming';
+	}
+	&:nth-child(4)::before {
+		content: 'Campfire';
+	}
+
+	&:hover img {
+		filter: brightness(30%);
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+}
+
+// &-item:hover img {
+// 	filter: brightness(30%);
+// }
+
+// &-item:hover::before {
+// 	opacity: 1;
+// }

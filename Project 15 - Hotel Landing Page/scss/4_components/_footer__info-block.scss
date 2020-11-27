@@ -1,0 +1,27 @@
+.footer__info-block {
+	padding: 0 5rem;
+
+	.footer__info-links {
+		display: flex;
+		flex-direction: column;
+
+		.list-item {
+			margin: 2rem 0;
+		}
+
+		.list-item .footer-link {
+			font-size: 1.5rem;
+			color: $light-color-3;
+			transition: $hover-transition;
+		}
+
+		.list-item .footer-link:hover {
+			color: $primary-color-2;
+		}
+	}
+
+	&:nth-child(2) {
+		border-left: 0.15rem solid $light-color-3;
+		border-right: 0.15rem solid $light-color-3;
+	}
+}

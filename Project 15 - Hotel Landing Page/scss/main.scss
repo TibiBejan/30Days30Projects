@@ -1,10 +1,13 @@
+// ABSTRACTS
 @import './1_abstracts/variables';
 @import './1_abstracts/placeholders';
 
+// BASE
 @import './2_base/reset';
 @import './2_base/base';
 @import './2_base/typography';
 
+// LAYOUT
 @import './3_layout/layout';
 @import './3_layout/header';
 @import './3_layout/showcase-details';
@@ -18,6 +21,22 @@
 @import './3_layout/blog-posts';
 @import './3_layout/footer';
 
+// COMPONENTS
 @import './4_components/buttons';
+// HEADER COMPONENTS
 @import './4_components/hamburger-toggler';
 @import './4_components/navbar-links';
+@import './4_components/responsive-header__topbar';
+@import './4_components/responsive-header__navbar';
+// CHOOSE US COMPONENTS
+@import './4_components/chooseUs__content-features';
+// TESTIMONIALS COMPONENTS
+@import './4_components/testimonial-slide';
+// ACTIVITIES COMPONENTS
+@import './4_components/activities__content-features';
+@import './4_components/activities__gallery-item';
+// ROOMS COMPONENTS
+@import './4_components/rooms__container-room';
+// FOOTER COMPONENTS
+@import './4_components/footer__info-block';
+@import './4_components/footer__social-media';

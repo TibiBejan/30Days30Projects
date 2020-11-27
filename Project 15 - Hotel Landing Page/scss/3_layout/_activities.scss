@@ -20,51 +20,6 @@
 		max-width: 70%;
 		font-weight: 300;
 	}
-
-	&-features {
-		max-width: 80%;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		column-gap: 10rem;
-		row-gap: 5rem;
-
-		@media screen and (max-width: $bp-desktopSize) {
-			column-gap: 5rem;
-		}
-
-		@media screen and (max-width: $bp-laptopSize) {
-			column-gap: 3rem;
-		}
-
-		.feature {
-			display: grid;
-			grid-template-columns: 5rem minmax(min-content, 1fr);
-			align-items: center;
-			column-gap: 2rem;
-
-			@media screen and (max-width: $bp-laptopSize) {
-				column-gap: 0.5rem;
-			}
-
-			i {
-				font-size: 3rem;
-				color: $primary-color-2;
-			}
-
-			.feature-label {
-				font-size: 1.5rem;
-				font-weight: 400;
-				letter-spacing: 0.15rem;
-				text-transform: uppercase;
-				color: $dark-color-1;
-				transition: $hover-transition;
-			}
-		}
-
-		.feature:hover .feature-label {
-			color: $primary-color-2;
-		}
-	}
 }
 
 .activities__gallery {
@@ -74,64 +29,5 @@
 
 	@media screen and (max-width: $bp-mobileMedium) {
 		grid-template-columns: 1fr;
-	}
-
-	&-item {
-		position: relative;
-		box-shadow: 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
-
-		@media screen and (max-width: $bp-mobileMedium) {
-			height: 70rem;
-		}
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			transition: $hover-transition;
-		}
-
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			font-family: $showcase-font;
-			font-size: 2rem;
-			font-weight: 400;
-			text-transform: uppercase;
-			letter-spacing: 0.2rem;
-			color: $light-color-1;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			opacity: 0;
-			pointer-events: none;
-			transition: $hover-transition;
-			z-index: 10;
-		}
-
-		&:nth-child(1)::before {
-			content: 'Outdoor bbq';
-		}
-		&:nth-child(2)::before {
-			content: 'Nature Walk';
-		}
-		&:nth-child(3)::before {
-			content: 'Lake swimming';
-		}
-		&:nth-child(4)::before {
-			content: 'Campfire';
-		}
-	}
-
-	&-item:hover img {
-		filter: brightness(30%);
-	}
-
-	&-item:hover::before {
-		opacity: 1;
 	}
 }

@@ -1,0 +1,25 @@
+@media screen and (max-width: $bp-tabletSize) {
+	.header__navbar {
+		position: fixed;
+		top: 0;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		background-color: rgba(0, 0, 0, 0.96);
+		z-index: 50;
+		transition: $element-transition;
+
+		.list-item {
+			margin: 4rem 0;
+		}
+
+		.list-item .navbar-link {
+			font-size: 2.5rem;
+		}
+	}
+
+	.header__navbar.open {
+		left: 0%;
+	}
+}

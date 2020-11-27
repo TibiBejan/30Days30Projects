@@ -1,0 +1,42 @@
+.testimonial-slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: $element-transition;
+
+	.testimonial-rating {
+		display: flex;
+
+		.testimonial-star {
+			display: inline-block;
+			margin: 0 0.3rem;
+		}
+
+		.testimonial-star i {
+			font-size: 2rem;
+			color: $primary-color-2;
+		}
+	}
+
+	.heading-three-testimonial {
+		max-width: 60%;
+	}
+
+	.testimonial-profile-image {
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	.testimonial-profile-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,38 @@
+@media screen and (max-width: $bp-tabletSize) {
+	.header__topbar {
+		.primary-button {
+			display: none;
+		}
+
+		.hamburger {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 6rem;
+			height: 100%;
+			overflow: hidden;
+			cursor: pointer;
+			z-index: 150;
+		}
+
+		.hamburger .line {
+			width: 4rem;
+			height: 0.4rem;
+			margin: 0.3rem 0;
+			background-color: $primary-color-2;
+			border-radius: 4rem;
+			transition: $element-transition;
+		}
+
+		.hamburger.active .line:first-child {
+			transform: translateY(1rem) rotate(45deg);
+		}
+		.hamburger.active .line:nth-child(2) {
+			transform: translateX(200%);
+		}
+		.hamburger.active .line:last-child {
+			transform: translateY(-1rem) rotate(-45deg);
+		}
+	}
+}

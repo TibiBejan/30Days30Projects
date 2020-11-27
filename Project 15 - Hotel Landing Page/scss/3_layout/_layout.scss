@@ -4,6 +4,8 @@
 	display: grid;
 	grid-template-columns: minmax(5rem, 1fr) [center-start] repeat(12, minmax(min-content, 15rem)) [center-end]
 		minmax(5rem, 1fr);
+	background-image: url('../../images/pattern.jpg');
+	background-repeat: repeat;
 }
 
 .header {

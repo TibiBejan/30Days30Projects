@@ -1,0 +1,44 @@
+.chooseUs__content-features {
+	max-width: 80%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 10rem;
+	row-gap: 5rem;
+
+	@media screen and (max-width: $bp-desktopSize) {
+		column-gap: 5rem;
+	}
+
+	@media screen and (max-width: $bp-laptopSize) {
+		column-gap: 3rem;
+	}
+
+	.feature {
+		display: grid;
+		grid-template-columns: 5rem minmax(min-content, 1fr);
+		align-items: center;
+		column-gap: 2rem;
+
+		@media screen and (max-width: $bp-laptopSize) {
+			column-gap: 0.5rem;
+		}
+
+		i {
+			font-size: 3rem;
+			color: $primary-color-2;
+		}
+
+		.feature-label {
+			font-size: 1.5rem;
+			font-weight: 400;
+			letter-spacing: 0.15rem;
+			text-transform: uppercase;
+			color: $light-color-1;
+			transition: $hover-transition;
+		}
+	}
+
+	.feature:hover .feature-label {
+		color: $primary-color-2;
+	}
+}
