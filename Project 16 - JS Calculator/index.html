@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>JS Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="calculator__status-bar">
+                <p class="current-time" id="clock">
+                    <span class="current-time__hours"></span> :
+                    <span class="current-time__minutes"></span>
+                </p>
+                <img src="images/status-bar.png" alt="Status bar icons" class="status-bar-notifications">
+            </div>
+            <div class="calculator__display">
+                <p class="calculator__display-textContent" id="calculator-result">0</p>
+            </div>
+            <div class="calculator__buttons">
+                <button type="button" class="button clear" data-all-clear>AC</button>
+                <button type="button" class="button clear span-2" data-delete>DELETE</button>
+                <button type="button" class="button operation" data-operation>÷</button>
+                <button type="button" class="button number" data-number>7</button>
+                <button type="button" class="button number" data-number>8</button>
+                <button type="button" class="button number" data-number>9</button>
+                <button type="button" class="button operation" data-operation>*</button>
+                <button type="button" class="button number" data-number>4</button>
+                <button type="button" class="button number" data-number>5</button>
+                <button type="button" class="button number" data-number>6</button>
+                <button type="button" class="button operation" data-operation>-</button>
+                <button type="button" class="button number" data-number>1</button>
+                <button type="button" class="button number" data-number>2</button>
+                <button type="button" class="button number" data-number>3</button>
+                <button type="button" class="button operation" data-operation>+</button>
+                <button type="button" class="button number span-2" data-number>0</button>
+                <button type="button" class="button number" data-number>.</button>
+                <button type="button" class="button operation" data-equals>=</button>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>
