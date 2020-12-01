@@ -62,7 +62,7 @@ class Calculator {
                 calculation = prev * current;
                 break;
             case '÷':
-                calculation = prev / current;
+                calculation =  prev / current;
                 break;
             default:
                 return;
@@ -130,4 +130,3 @@ function currentTime(){
 }
 
 setInterval(currentTime, 1000);
-

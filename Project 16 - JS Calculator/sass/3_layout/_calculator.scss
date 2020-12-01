@@ -46,8 +46,12 @@
 		overflow: hidden;
 
 		&-textContent {
-			font-size: 6rem;
+			height: 100%;
+			width: 100%;
+			font-size: 5rem;
 			letter-spacing: 0.2rem;
+			word-wrap: break-word;
+			word-break: break-all;
 		}
 	}
 
