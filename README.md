@@ -26,3 +26,5 @@ Day 17 | Book Finder App
 Day 18 | Hotel Landing Page
 Day 19 | Hotel Landing Page
 Day 20 | Hotel Landing Page
+Day 21 | JS Calculator
+Day 22 | Weather App
