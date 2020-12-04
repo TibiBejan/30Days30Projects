@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $font;
+	font-weight: 300;
+	font-size: 62.5%;
+	color: $dark-color-1;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 3rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 5rem;
+}
+
+.day-theme {
+	color: $light-color-1 !important;
+
+	&::before {
+		background-color: $light-color-1 !important;
+	}
+}

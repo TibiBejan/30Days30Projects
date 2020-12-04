@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 62.5%;
+  color: #111;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.mb-small {
+  margin-bottom: 1rem;
+}
+
+.mb-medium {
+  margin-bottom: 2rem;
+}
+
+.mb-large {
+  margin-bottom: 3rem;
+}
+
+.mb-xlarge {
+  margin-bottom: 5rem;
+}
+
+.day-theme {
+  color: #fff !important;
+}
+
+.day-theme::before {
+  background-color: #fff !important;
+}
+
+.heading-one {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+}
+
+.heading-two {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  line-height: 1.5;
+}
+
+.current-temp {
+  font-family: "Raleway", sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0.15rem;
+  line-height: 1;
+}
+
+.max-temp,
+.min-temp {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7rem;
+  color: #939393;
+}
+
+.max-temp i,
+.min-temp i {
+  display: inline-block;
+  margin-right: 0.3rem;
+  color: #111;
+}
+
+.feels-like-temp,
+.humidity-level {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 4rem;
+}
+
+.feels-like-label,
+.humidity-label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #939393;
+}
+
+.app {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 450px) {
+  .app {
+    margin: 5rem 0;
+  }
+}
+
+.app__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.app__header #search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.app__header #search-form input {
+  display: block;
+  width: 85%;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  transition: 0.25s ease;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.app__header #search-form input::placeholder {
+  color: #939393;
+}
+
+.app__header #search-form input:focus {
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.app__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.app__card-header {
+  position: relative;
+}
+
+.app__card-header img {
+  width: 100%;
+  height: auto;
+}
+
+.app__card-header .weather-location {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.app__card-header .weather-location::before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #111;
+}
+
+.app__card-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  justify-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.app__card-content .current-temp {
+  justify-self: center;
+}
+
+.app__card-content .temperature-info {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.app__card-content .temperature-info .heading-two {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.app__card-content .weather-icon {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.app__card-content .weather-feels-like,
+.app__card-content .weather-humidity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__card .error-div {
+  height: 65rem;
+  width: 100%;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__card .error-div .heading-two {
+  color: red;
+  text-align: center;
+}
