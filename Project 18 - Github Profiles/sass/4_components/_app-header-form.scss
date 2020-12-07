@@ -1,0 +1,34 @@
+.app-header__form {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+
+	.form-input {
+		height: 100%;
+		width: 30rem;
+		background-color: $light-color-1;
+		border-top-left-radius: 3rem;
+		border-bottom-left-radius: 3rem;
+		box-shadow: inset 0.5rem 0.5rem 1rem $light-color-2;
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: $dark-color-2;
+		text-align: center;
+	}
+
+	.submit-button {
+		height: 100%;
+		width: 10rem;
+		background-color: $dark-color-2;
+		border-top-right-radius: 3rem;
+		border-bottom-right-radius: 3rem;
+		color: $light-color-1;
+		font-size: 1.3rem;
+		letter-spacing: 0.2rem;
+		transition: 0.25s ease;
+	}
+
+	.submit-button:hover {
+		background-color: $primary-color-3;
+	}
+}

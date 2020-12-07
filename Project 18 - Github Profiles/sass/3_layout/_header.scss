@@ -1,0 +1,26 @@
+.header {
+	grid-column: 1 / -1;
+	grid-row: 1 / 2;
+	background-color: $dark-color-2;
+
+	&__navbar {
+		width: 100%;
+		max-width: 130rem;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 5rem;
+
+		&-repo {
+			font-size: 3rem;
+			color: $light-color-1;
+			transition: 0.25s ease;
+		}
+
+		&-repo:hover {
+			color: $primary-color-3;
+		}
+	}
+}

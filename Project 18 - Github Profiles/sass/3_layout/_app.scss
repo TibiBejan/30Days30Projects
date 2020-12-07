@@ -1,0 +1,97 @@
+.app {
+	grid-column: 2 / span 10;
+	grid-row: 2 / 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 5rem 0;
+
+	@media screen and (max-width: 650px) {
+		grid-column: 1 / -1;
+	}
+
+	&-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&-profile {
+		width: 100%;
+		max-width: 90rem;
+		min-height: 10rem;
+		display: grid;
+		grid-template-columns: minmax(20rem, 35rem) 1fr;
+		background-color: $dark-color-2;
+		border-radius: 3rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+
+		&__image {
+			grid-column: 1 / 2;
+			height: 100%;
+			background-color: $dark-color-1;
+		}
+
+		&__image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media screen and (max-width: 650px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 50rem 1fr;
+
+			&__image {
+				grid-row: 1 / 2;
+			}
+
+			&__user-info {
+				grid-row: 2 / 3;
+			}
+		}
+
+		@media screen and (max-width: 550px) {
+			border-radius: 0;
+		}
+	}
+
+	&-repositories {
+		width: 100%;
+		max-width: 90rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 5rem;
+		background-color: $dark-color-2;
+		border-radius: 3rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+		overflow: hidden;
+
+		@media screen and (max-width: 550px) {
+			border-radius: 0;
+		}
+	}
+
+	&-error {
+		width: 100%;
+		max-width: 90rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 5rem;
+		background-color: $dark-color-2;
+		border-radius: 3rem;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+		@media screen and (max-width: 550px) {
+			border-radius: 0;
+		}
+	}
+}

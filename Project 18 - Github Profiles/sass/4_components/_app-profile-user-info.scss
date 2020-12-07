@@ -1,0 +1,80 @@
+.app-profile__user-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3rem;
+
+	.user-info {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		.list-item {
+			margin: 1rem;
+		}
+
+		.list-item span {
+			display: inline-block;
+			padding: 1.3rem 1rem;
+			font-size: 1rem;
+			font-weight: 600;
+			border-radius: 1rem;
+			box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+		}
+
+		.list-item .repos-label {
+			background-color: $primary-color-1;
+		}
+		.list-item .gists-label {
+			background-color: $primary-color-2;
+		}
+		.list-item .followers-label {
+			background-color: $primary-color-3;
+		}
+		.list-item .following-label {
+			background-color: $primary-color-4;
+		}
+	}
+
+	.user-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		.list-item {
+			max-width: 50rem;
+			margin: 1rem 0;
+		}
+
+		.list-item .label {
+			display: block;
+			font-size: 2rem;
+			font-weight: 600;
+			letter-spacing: 0.15rem;
+		}
+
+		.list-item .paragraph {
+			font-size: 1.6rem;
+		}
+	}
+
+	.view-profile {
+		display: inline-block;
+		padding: 2rem 5rem;
+		background-color: $dark-color-1;
+		border-radius: 1rem;
+		font-size: 1.5rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $light-color-1;
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+		transition: 0.25s ease;
+	}
+
+	.view-profile:hover {
+		background-color: $primary-color-3;
+	}
+}
