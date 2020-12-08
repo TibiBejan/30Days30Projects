@@ -28,3 +28,5 @@ Day 19 | Hotel Landing Page
 Day 20 | Hotel Landing Page
 Day 21 | JS Calculator
 Day 22 | Weather App
+Day 23 | Github Profiles
+Day 24 | Movie App
