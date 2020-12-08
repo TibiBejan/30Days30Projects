@@ -1,0 +1,69 @@
+.heading-one {
+	font-size: 3rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+
+	@media screen and (max-width: $utility-bp-4) {
+		max-width: 80%;
+		font-size: 2rem;
+		text-align: center;
+	}
+}
+
+.heading-two {
+	font-size: 2.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+}
+
+.heading-four {
+	font-size: 1.3rem;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+}
+
+.movie-card__genre {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $text-color-3;
+}
+
+.rating-label {
+	padding: 0 0.5rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.footer-paragraph {
+	font-size: 1.7rem;
+	font-weight: 400;
+	color: $text-color-3;
+	line-height: 1.5;
+
+	.github-link {
+		font-weight: 600;
+		color: $text-color-2;
+	}
+}
+
+.movie-description {
+	line-height: 1.5;
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.15rem;
+}
+
+.release-year,
+.movie-duration {
+	margin-right: 2rem;
+	font-size: 1.7rem;
+	font-weight: 600;
+	letter-spacing: 0.15rem;
+	color: $text-color-3;
+}

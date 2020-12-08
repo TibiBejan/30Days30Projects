@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $default-font;
+	font-size: 62.5%;
+	font-weight: 300;
+	color: $text-color-1;
+
+	@media screen and (max-width: $utility-bp-4) {
+		font-size: 50%;
+	}
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 3rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 4rem;
+}
+
+.mb-sections {
+	margin-bottom: 5rem;
+}

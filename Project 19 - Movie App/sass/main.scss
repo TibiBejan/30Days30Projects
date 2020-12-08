@@ -1,0 +1,16 @@
+@import './1_abstracts/variables';
+
+@import './2_base/reset';
+@import './2_base/base';
+@import './2_base/typography';
+
+@import './3_layout/layout';
+@import './3_layout/header';
+@import './3_layout/content';
+@import './3_layout/movie-modal';
+
+@import './4_components/buttons';
+@import './4_components/app-logo';
+@import './4_components/search-form';
+@import './4_components/movie-card';
+@import './4_components/movie-modal-genres';

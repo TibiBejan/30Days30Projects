@@ -1,0 +1,50 @@
+.app__header {
+	display: flex;
+	flex-direction: column;
+
+	&-navbar {
+		height: 10rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 5rem;
+
+		.tmdb-logo {
+			width: 10rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.tmdb-logo img {
+			width: 7rem;
+			height: auto;
+		}
+	}
+
+	&-banner {
+		position: relative;
+		height: calc(100% - 10rem);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		padding-bottom: 5rem;
+
+		.banner-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			filter: brightness(50%);
+			z-index: 1;
+		}
+
+		.heading-one,
+		.transparent-button {
+			z-index: 5;
+		}
+	}
+}

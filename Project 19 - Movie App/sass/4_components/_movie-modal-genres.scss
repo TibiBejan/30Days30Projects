@@ -1,0 +1,21 @@
+.movie-genres {
+	display: flex;
+	align-items: center;
+
+	.list-item {
+		margin: 0 0.5rem;
+		padding: 0 0.5rem;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: $text-color-3;
+
+		&:first-child {
+			margin-left: 0;
+			padding-left: 0;
+		}
+
+		&:not(:last-child) {
+			border-right: 0.15rem solid $text-color-3;
+		}
+	}
+}
