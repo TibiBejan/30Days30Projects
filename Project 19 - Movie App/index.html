@@ -33,8 +33,10 @@
                     </form>
                     <select name="category" id="category-selector">
                         <option value="popular" selected="selected">Popularity</option>
-                        <option value="top_rated">Top Rated</option>
                         <option value="now_playing">Now Playing</option>
+                        <option value="top_rated">Top Rated</option>
+                        <option value="upcoming">Upcoming</option>
+                        
                     </select>
                 </nav>
                 <div class="app__content-movies"></div>
@@ -44,34 +46,7 @@
             </section>
         </div>
 
-        <div class="movie-modal" id="movie-modal">
-            <div class="movie-modal__image">
-                <img src="" alt="">
-            </div>
-            <div class="movie-modal__content">
-                <ul class="movie-genres mb-medium">
-                    <li class="list-item">Music</li>
-                    <li class="list-item">Drama</li>
-                    <li class="list-item">Romance</li>
-                </ul>
-                <h2 class="heading-two movie-title mb-large">Clouds</h2>
-                <p class="movie-description mb-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque atque cupiditate nostrum dolores, eveniet cum repellendus officiis veniam nihil id, error earum sequi. Minima, necessitatibus.</p>
-                <div class="movie-labels mb-large">
-                    <span class="release-year">2020</span>
-                    <span class="movie-duration">2h01min</span>
-                </div>
-                <div class="buttons">
-                    <button type="button" class="button primary-button">
-                        <i class="far fa-times-circle"></i>
-                        <span class="button-label">Close</span>
-                    </button>
-                    <button type="button" class="primary-button">
-                        <i class="far fa-file-video"></i>
-                        <span class="button-label">Watch Trailer</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <div class="movie-modal" id="movie-modal"></div>
         
         <script type="module" src="./js/app.js"></script>
     </body>

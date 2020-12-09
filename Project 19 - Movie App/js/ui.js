@@ -20,7 +20,7 @@ class UI{
         </div> 
         `).join('');
 
-        this.moviesContainer.innerHTML = moviesHTML;
+        this.moviesContainer.innerHTML += moviesHTML;
     }
 
     displayRandomMovie(data){
@@ -37,7 +37,50 @@ class UI{
     }
 
     displayModal(data){
-        console.log(data);
+        const movieModalHTML = `
+        <div class="movie-modal__content">
+            <div class="movie-modal__content-image">
+                <img src="https://image.tmdb.org/t/p/original/${data.movieData.backdrop_path}" alt="${data.movieData.title}">
+            </div>
+            <div class="movie-modal__content-info">
+                <ul class="movie-genres mb-medium">
+                    ${data.movieData.genres.map(genre => {
+                        return `
+                            <li class="list-item">${genre.name}</li>
+                        `
+                    }).join('')}
+                </ul>
+                <h2 class="heading-two movie-title mb-large">${data.movieData.title}</h2>
+                <p class="movie-description mb-large">${data.movieData.overview}</p>
+                <div class="movie-labels mb-large">
+                    <span class="release-year">${data.movieData.release_date}</span>
+                    <span class="movie-duration">${data.movieData.runtime}mins</span>
+                </div>
+                <div class="buttons">
+                    <button type="button" class="button primary-button close-button">
+                        <i class="far fa-times-circle"></i>
+                        <span class="button-label">Close</span>
+                    </button>
+                    <a href="https://www.youtube.com/watch?v=${data.videoData.results[0].key}" target="blank" class="primary-button">
+                        <i class="far fa-file-video"></i>
+                        <span class="button-label">Watch Trailer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        `
+
+        this.modal.innerHTML = movieModalHTML;
+
+        this.modal.addEventListener('click', (e) => {
+            if(e.target.closest('.close-button')){
+                this.modal.classList.remove('open');
+            }
+
+             if(!e.target.closest('.movie-modal__content')){
+                this.modal.classList.remove('open');
+            }
+        });
     }
 }
 

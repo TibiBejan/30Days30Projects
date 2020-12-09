@@ -27,6 +27,9 @@
 	&__title {
 		grid-row: 2 / 3;
 		max-width: 90%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 
 	&__genre {

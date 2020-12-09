@@ -1,28 +1,34 @@
 class Fetch{
     constructor(){
         this.apiKey = '397f0df62280d2eda46af34a0f353edd';
+        this.url = 'https://api.themoviedb.org/3/';
     }
 
-    async fetchMovies(input, pageIndex){
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${input}?api_key=${this.apiKey}&language=en-US&page=${pageIndex}`);
-        const moviesData = await response.json();
+    async fetchMovies(category, pageIndex){
+        const response = await fetch(`${this.url}movie/${category}?api_key=${this.apiKey}&language=en-US&page=${pageIndex}`);
+        const data = await response.json();
 
-        return moviesData;
+        return data;
     }
 
-    async fetchMovie(input) {
-        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${input}`);
-        const movieData = await response.json();
+    async fetchSearchedMovie(searchQuery, pageIndex) {
+        const response = await fetch(`${this.url}search/movie?api_key=${this.apiKey}&query=${searchQuery}&page=${pageIndex}`);
+        const data = await response.json();
 
-        return movieData;
+        return data;
     }
 
     async fetchMovieById(id){
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}&language=en-US`);
-        const movieDataById = await response.json();
+        const movieResponse = await fetch(`${this.url}movie/${id}?api_key=${this.apiKey}&language=en-US`);
+        const videoResponse = await fetch(`${this.url}movie/${id}/videos?api_key=${this.apiKey}&language=en-US`);
 
-        return movieDataById;
+        const movieData = await movieResponse.json();
+        const videoData = await videoResponse.json();
+
+        return {movieData, videoData}
     }
+
+
 }
 
 export default Fetch;
