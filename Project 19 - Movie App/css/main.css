@@ -195,16 +195,11 @@ html {
   font-weight: 600;
 }
 
-.footer-paragraph {
+.paragraph {
   font-size: 1.7rem;
   font-weight: 400;
   color: #4b4e60;
   line-height: 1.5;
-}
-
-.footer-paragraph .github-link {
-  font-weight: 600;
-  color: #6d6fe9;
 }
 
 .movie-description {
@@ -364,6 +359,8 @@ html {
   background-color: #171934;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
   gap: 3rem;
   padding: 10rem 5rem;
 }
@@ -418,6 +415,12 @@ html {
   width: 60rem;
   height: 100%;
   background-color: #0c0f26;
+}
+
+@media screen and (max-width: 850px) {
+  .movie-modal__content {
+    width: 100%;
+  }
 }
 
 .movie-modal__content .movie-modal__content-image {
@@ -500,10 +503,6 @@ html {
 .primary-button:hover {
   background-color: #faa728;
   color: #fff;
-}
-
-.hidden {
-  display: none;
 }
 
 .logo {
@@ -666,4 +665,20 @@ html {
 
 .movie-genres .list-item:not(:last-child) {
   border-right: 0.15rem solid #4b4e60;
+}
+
+.error-card {
+  grid-column: 1 / -1;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #1c223a;
+}
+
+.error-card .paragraph {
+  color: red;
 }

@@ -1,6 +1,8 @@
 class UI{
     constructor(){
         this.headerBanner = document.querySelector('.app__header-banner');
+        this.bannerImage = document.querySelector('.banner-image');
+        this.bannerTitle = document.querySelector('.heading-one');
         this.moviesContainer = document.querySelector('.app__content-movies');
         this.modal = document.getElementById('movie-modal');
     }
@@ -23,17 +25,24 @@ class UI{
         this.moviesContainer.innerHTML += moviesHTML;
     }
 
+    displayErrorCard(message){
+        const errorHTML = `
+            <div class="error-card">
+                <p class="paragraph">${message}</p>
+            </div>
+        `
+
+        this.moviesContainer.innerHTML = errorHTML;
+    }
+
     displayRandomMovie(data){
         const randomNumber = Math.floor(Math.random() * data.results.length + 1);
         const randomMovie = data.results[randomNumber];
 
-        this.headerBanner.innerHTML = `
-            <img src="https://image.tmdb.org/t/p/original/${randomMovie.backdrop_path}" alt="${randomMovie.title}" class="banner-image">
-            <h1 class="heading-one mb-medium">${randomMovie.title}</h1>
-            <button type="button" class="button transparent-button" id="banner-preview-button">View More</button>
-        `;
-
-        this.headerBanner.setAttribute('data-id', `${randomMovie.id}`)
+        this.bannerImage.setAttribute('src', `https://image.tmdb.org/t/p/original/${randomMovie.backdrop_path}`);
+        this.bannerImage.setAttribute('alt', `${randomMovie.title}`);
+        this.bannerTitle.innerText = `${randomMovie.title}`;
+        this.headerBanner.setAttribute('data-id', `${randomMovie.id}`);
     }
 
     displayModal(data){

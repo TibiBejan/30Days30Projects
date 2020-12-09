@@ -1,140 +1,96 @@
 import Fetch from './fetch.js';
 import UI from './ui.js';
 
+const ft = new Fetch();
+const ui = new UI();
+
 const searchForm = document.getElementById('search-form');
 const selectOptions = document.getElementById('category-selector');
 const moviesContainer = document.querySelector('.app__content-movies');
 const movieModal = document.getElementById('movie-modal');
-
 const loadMore_button = document.getElementById('load-more');
+const bannerPreview_button = document.getElementById('banner-preview-button');
 
 let pageIndex = 1;
-const ft = new Fetch();
-const ui = new UI();
 
 // EVENT LISTENERS
 window.addEventListener('DOMContentLoaded', initApp);
 searchForm.addEventListener('submit', getInput);
 selectOptions.addEventListener('change', getInputOption);
+bannerPreview_button.addEventListener('click', togglePreviewMovie);
 loadMore_button.addEventListener('click', loadMore);
 
-function initApp(e){
+// DISPLAY MOVIE RESULTS ON PAGE LOAD
+async function initApp(e){
     const defaultOptionValue = selectOptions.options[0].value;
-
-    // LOAD MORE BUTTON VISIBLE
-    loadMore_button.classList.remove('hidden');
-
-    ft.fetchMovies(defaultOptionValue, pageIndex)
-    .then(data => {
-        ui.displayMovieCards(data);
-        ui.displayRandomMovie(data);
-        toggleMovieModal();
-        togglePreviewMovie();
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+    const data = await ft.fetchMovies(defaultOptionValue, pageIndex);
+    ui.displayMovieCards(data);
+    ui.displayRandomMovie(data);
+    toggleMovieModal();
 }
 
-function getInput(e){
+// DISPLAY MOVIES BASED ON SEARCH INPUT
+async function getInput(e){
     e.preventDefault();
     const searchInput = document.querySelector('.form-input');
     const searchQuery = searchInput.value;
-
-     // LOAD MORE BUTTON HIDDEN
-     loadMore_button.classList.add('hidden');
-     // RESET SELECT ELEMENT
-     selectOptions.selectedIndex = 0;
-
     if(searchQuery !== ''){
-        ft.fetchSearchedMovie(searchQuery).then(data => {
-            // RESET MOVIES CONTAINER
+        const data = await ft.fetchSearchedMovie(searchQuery);
+        if(data.results.length !== 0){
             moviesContainer.innerHTML = '';
             ui.displayMovieCards(data);
             toggleMovieModal();
-        }).catch(err => {
-            console.log(err);
-        });
-
-        searchInput.value = '';
+            // RESET THE SEARCH INPUT
+            searchInput.value = '';
+        } else {
+            ui.displayErrorCard('There is nothing here, please try again!')
+        }
     } else {
-        alert('You must search for a movie title!');
+        ui.displayErrorCard('You must search for a movie title!')
     }
 }
 
-function getInputOption(e){
+// DISPLAY MOVIES BASED ON SELECTED CATEGORY
+async function getInputOption(){
     const option = this.value;
-     // LOAD MORE BUTTON VISIBLE
-     loadMore_button.classList.remove('hidden');
-    
-    ft.fetchMovies(option, pageIndex)
-        .then(data => {
-            // RESET MOVIES CONTAINER
-            moviesContainer.innerHTML = '';
-            ui.displayMovieCards(data);
-            toggleMovieModal();
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const data = await ft.fetchMovies(option, pageIndex);
+    moviesContainer.innerHTML = '';
+    ui.displayMovieCards(data);
+    toggleMovieModal();
 }
 
-// GET MOVIE CARDS ID 
+// TOGGLE MODAL AND DISPLAY SELECTED MOVIE ON MOVIE CARD CLICK
 function toggleMovieModal(){
     const movies = document.querySelectorAll('.movie-card');
-
     movies.forEach((movie) => {
-        const thisMovie = movie;
-        movie.addEventListener('click', () => {
-            const movieId = thisMovie.dataset.id;
-            // OPEN MODAL
-            movieModal.classList.add('open');
-            movieModal.innerHTML = '';
-            
-            ft.fetchMovieById(movieId)
-            .then(data => {
-                ui.displayModal(data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        movie.addEventListener('click', function() {
+            const movieId = this.dataset.id;
+            displayMovieById(movieId);
         });
     });
 }
 
+// TOGGLE MODAL AND DISPLAY THE BANNER MOVIE ON BUTTON CLICK
 function togglePreviewMovie(){
-    const appHeader_div = document.querySelector('.app__header-banner');
-    const bannerPreview_button = document.getElementById('banner-preview-button');
-
-    bannerPreview_button.addEventListener('click', (e) => {
-        const movieId = appHeader_div.dataset.id;
-
-        // OPEN MODAL
-        movieModal.classList.add('open');
-        movieModal.innerHTML = '';
-        
-        ft.fetchMovieById(movieId)
-        .then(data => {
-            ui.displayModal(data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-    });
+    const movieId = this.parentElement.dataset.id;
+    displayMovieById(movieId);
 }
 
-function loadMore(){
+// FUNCTION TO DISPLAY THE SELECTED MOVIE
+async function displayMovieById(movieId){
+    movieModal.classList.add('open');
+    movieModal.innerHTML = '';
+    const movieData = await ft.fetchMovieById(movieId);
+    ui.displayModal(movieData);
+}
+
+// LOAD MORE MOVIES ON LOAD-MORE BUTTON CLICK
+async function loadMore(){
     const currentOption = selectOptions.options[selectOptions.selectedIndex].value;
     pageIndex++;
-    
-    ft.fetchMovies(currentOption, pageIndex)
-    .then(data => {
-        ui.displayMovieCards(data);
-        toggleMovieModal();
-    })
-    .catch((err) => {
-        console.log(err);
-    });
+    const moreData = await ft.fetchMovies(currentOption, pageIndex);
+    ui.displayMovieCards(moreData);
+    toggleMovieModal();
 }
 
    

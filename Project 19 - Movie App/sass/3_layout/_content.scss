@@ -43,6 +43,8 @@
 		background-color: $primary-color-2;
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
+		align-items: center;
+		justify-items: center;
 		gap: 3rem;
 		padding: 10rem 5rem;
 

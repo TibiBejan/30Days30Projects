@@ -1,0 +1,15 @@
+.error-card {
+	grid-column: 1 / -1;
+	width: 50rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5rem 2rem;
+	text-align: center;
+	border-radius: 1rem;
+	background-color: $primary-color-3;
+
+	.paragraph {
+		color: red;
+	}
+}

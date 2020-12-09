@@ -11,8 +11,8 @@ class Fetch{
         return data;
     }
 
-    async fetchSearchedMovie(searchQuery, pageIndex) {
-        const response = await fetch(`${this.url}search/movie?api_key=${this.apiKey}&query=${searchQuery}&page=${pageIndex}`);
+    async fetchSearchedMovie(searchQuery) {
+        const response = await fetch(`${this.url}search/movie?api_key=${this.apiKey}&query=${searchQuery}`);
         const data = await response.json();
 
         return data;
