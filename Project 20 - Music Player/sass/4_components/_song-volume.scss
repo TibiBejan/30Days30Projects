@@ -1,0 +1,47 @@
+.song-volume {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem;
+	padding: 2rem;
+	border-radius: 5rem;
+	background-color: $dark-color-3;
+
+	#range {
+		width: 20rem;
+	}
+
+	#range::-webkit-slider-runnable-track {
+		width: 100%;
+		height: 1rem;
+		cursor: pointer;
+		background-color: $dark-color-2;
+		border-radius: 0.5rem;
+	}
+	#range::-webkit-slider-thumb {
+		box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3), -0.1rem -0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		background: $light-color-1;
+		cursor: pointer;
+		margin-top: -3.6px;
+	}
+
+	#range::-moz-range-track {
+		width: 100%;
+		height: 1rem;
+		cursor: pointer;
+		background: $dark-color-2;
+		border-radius: 0.5rem;
+	}
+
+	#range::-moz-range-thumb {
+		box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.3), -0.1rem -0.1rem 0.2rem rgba(0, 0, 0, 0.3);
+		height: 2rem;
+		width: 2rem;
+		border-radius: 50%;
+		background: $light-color-1;
+		cursor: pointer;
+	}
+}

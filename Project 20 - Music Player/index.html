@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Music Player</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="wrapper">
+            <div class="wrapper__notch"></div>
+            <div class="wrapper__player">
+                <div class="wrapper__player-cover">
+                    <img src="./covers/toosie-slide.jpg" alt="" id="song-cover">
+                </div>
+                <div class="wrapper__player-content">
+                    <div class="song-header mb-small">
+                        <div class="song-header__duration">
+                            <div class="current-time"></div>
+                        </div>
+                        <div class="song-header__react-button">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="song-header__info">
+                            <h1 class="heading-one mb-small" id="song-name">Horsin' Around</h1>
+                            <h2 class="heading-two" id="song-artists">Mark bananana & the horse</h2>
+                        </div>
+                        <div class="song-header__view-more-button">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="song-buttons">
+                        <ul class="song-buttons__list">
+                            <li class="list-item">
+                                <button type="button" class="button transparent-button" id="repeat-song">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button type="button" class="button primary-button" id="previous-song">
+                                    <i class="fas fa-backward"></i>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button type="button" class="button primary-button running" id="play-pause">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button type="button" class="button primary-button" id="next-song">
+                                    <i class="fas fa-forward"></i>
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button type="button" class="button transparent-button" id="random-song">
+                                    <i class="fas fa-random"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="song-volume">
+                        <button type="button" class="button transparent-button" id="mute">
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                        <input type="range" id="range" min="0" max="1" step="0.01" value="0.5">
+                        <button type="button" class="button transparent-button" id="max-volume">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <script type="module" src="./js/app.js"></script>
+    </body>
+</html>

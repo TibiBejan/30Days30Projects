@@ -1,0 +1,35 @@
+.song-buttons {
+	margin: 0 2rem;
+	padding: 1rem 0;
+	border-top: 0.2rem solid $dark-color-3;
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.transparent-button {
+	@extend %button;
+}
+
+.primary-button {
+	position: relative;
+	@extend %button;
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	background-color: $dark-color-3;
+}
+
+#play-pause {
+	width: 7rem;
+	height: 7rem;
+	font-size: 3rem;
+}
+
+.active {
+	color: $primary-color;
+}

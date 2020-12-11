@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: $default-font;
+	font-size: 62.5%;
+	font-weight: 300;
+	color: $light-color-1;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: $background-gradient;
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 3rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 4rem;
+}
