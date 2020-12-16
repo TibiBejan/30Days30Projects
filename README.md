@@ -30,3 +30,4 @@ Day 21 | JS Calculator
 Day 22 | Weather App
 Day 23 | Github Profiles
 Day 24 | Movie App
+Day 25 | Music Player
