@@ -1,0 +1,65 @@
+.small-text {
+	font-size: 3rem;
+	font-weight: 700;
+	color: $primary-color-4;
+	letter-spacing: 0.2rem;
+	user-select: none;
+
+	@media screen and (max-width: 450px) {
+		font-size: 2rem;
+	}
+}
+
+.play-game-text,
+.game-over-text,
+.victory-text {
+	user-select: none;
+	font-size: 15rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+	color: $primary-color-4;
+	text-align: center;
+
+	@media screen and (max-width: 450px) {
+		font-size: 7rem;
+	}
+}
+
+.game__heading-one {
+	font-size: 8rem;
+	font-weight: 700;
+	color: $light-color;
+	letter-spacing: 0.2rem;
+
+	@media screen and (max-width: 450px) {
+		font-size: 4rem;
+	}
+}
+
+.heading-two {
+	margin-right: 2rem;
+	font-size: 5rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+
+	@media screen and (max-width: 450px) {
+		font-size: 2.5rem;
+	}
+}
+
+.remaining-time,
+.total-flips {
+	font-size: 5rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+
+	@media screen and (max-width: 450px) {
+		font-size: 3rem;
+	}
+}
+
+.heading-three {
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+}

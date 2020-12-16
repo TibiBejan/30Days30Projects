@@ -1,0 +1,40 @@
+.game {
+	width: 90%;
+	max-width: 70rem;
+	min-height: 90rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5rem 0;
+
+	@media screen and (max-width: 750px) {
+		max-width: 50rem;
+	}
+
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&-countdown,
+		&-flips {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: center;
+		gap: 1rem;
+		perspective: 1000px;
+
+		@media screen and (max-width: 750px) {
+			grid-template-columns: repeat(2, minmax(10rem, 25rem));
+		}
+	}
+}

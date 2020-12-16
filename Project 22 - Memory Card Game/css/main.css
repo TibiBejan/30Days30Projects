@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+code,
+em,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 62.5%;
+  font-weight: 400;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom right, rgba(82, 194, 52, 0.6), rgba(6, 23, 0, 0.8)), url("../../assets/images/christmas-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  pointer-events: all;
+  z-index: 1000;
+}
+
+.mb-small {
+  margin-bottom: 1rem;
+}
+
+.mb-medium {
+  margin-bottom: 2rem;
+}
+
+.mb-large {
+  margin-bottom: 4rem;
+}
+
+.small-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e7e0d6;
+  letter-spacing: 0.2rem;
+  user-select: none;
+}
+
+@media screen and (max-width: 450px) {
+  .small-text {
+    font-size: 2rem;
+  }
+}
+
+.play-game-text,
+.game-over-text,
+.victory-text {
+  user-select: none;
+  font-size: 15rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: #e7e0d6;
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .play-game-text,
+  .game-over-text,
+  .victory-text {
+    font-size: 7rem;
+  }
+}
+
+.game__heading-one {
+  font-size: 8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .game__heading-one {
+    font-size: 4rem;
+  }
+}
+
+.heading-two {
+  margin-right: 2rem;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .heading-two {
+    font-size: 2.5rem;
+  }
+}
+
+.remaining-time,
+.total-flips {
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 450px) {
+  .remaining-time,
+  .total-flips {
+    font-size: 3rem;
+  }
+}
+
+.heading-three {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.game {
+  width: 90%;
+  max-width: 70rem;
+  min-height: 90rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 0;
+}
+
+@media screen and (max-width: 750px) {
+  .game {
+    max-width: 50rem;
+  }
+}
+
+.game__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game__header-countdown, .game__header-flips {
+  display: flex;
+  align-items: center;
+}
+
+.game__content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  perspective: 1000px;
+}
+
+@media screen and (max-width: 750px) {
+  .game__content {
+    grid-template-columns: repeat(2, minmax(10rem, 25rem));
+  }
+}
+
+.game__content-card {
+  position: relative;
+  height: 20rem;
+  cursor: pointer;
+}
+
+.game__content-card .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 0.3rem double #ffffff;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.game__content-card .front-face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #165b33;
+  transform: rotateY(180deg);
+}
+
+.game__content-card .front-face .background-circle {
+  width: 13rem;
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.3rem dotted #ffffff;
+  background-color: #146b3a;
+}
+
+.game__content-card .front-face .background-circle .card-value {
+  width: 65%;
+  height: 65%;
+  object-fit: cover;
+}
+
+.game__content-card .back-face {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #bb2528;
+  transform: rotateY(0deg);
+}
+
+.game__content-card.visible .front-face {
+  transform: rotateY(0deg);
+}
+
+.game__content-card.visible .back-face {
+  transform: rotateY(-180deg);
+}
+
+.game__content-card.matched .front-face .background-circle {
+  animation: matched 1.5s linear infinite;
+}
+
+@keyframes matched {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+.snowflake {
+  width: 9rem;
+  height: 9rem;
+}
+
+.snowflake-small {
+  width: 7rem;
+  height: 7rem;
+}
+
+.snowflake-top-left {
+  position: absolute;
+  top: -2.5rem;
+  left: -2.5rem;
+  transform: rotate(45deg);
+}
+
+.snowflake-top-right {
+  position: absolute;
+  top: -2.5rem;
+  right: -2.5rem;
+  transform: rotate(-45deg);
+}
+
+.snowflake-bottom-left {
+  position: absolute;
+  bottom: -2.5rem;
+  left: -2.5rem;
+  transform: rotate(-45deg);
+}
+
+.snowflake-bottom-right {
+  position: absolute;
+  bottom: -2.5rem;
+  right: -2.5rem;
+  transform: rotate(45deg);
+}

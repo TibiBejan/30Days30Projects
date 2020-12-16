@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Memory Card Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <!-- OVERLAY GAME TEXT -->
+        <div class="overlay-text visible">
+            <span class="play-game-text">Click to Start</span>
+        </div>
+        <div class="overlay-text" id="game-over-overlay">
+            <span class="game-over-text mb-medium">Game Over</span>
+            <span class="small-text">Click to Restart</span>
+        </div>
+        <div class="overlay-text" id="victory-overlay">\
+            <span class="victory-text mb-medium">Victory</span>
+            <span class="small-text">Click to Restart</span>
+        </div>
+
+        <!-- GAME SECTION -->
+        <section class="game">
+            <h1 class="game__heading-one mb-large">Mix-or-Match</h1>
+            <div class="game__header mb-medium">
+                <div class="game__header-countdown">
+                    <h2 class="heading-two">Time</h2>
+                    <span class="remaining-time"></span>
+                </div>
+                <div class="game__header-flips">
+                    <h2 class="heading-two">Flips</h2>
+                    <span class="total-flips"></span>
+                </div>
+            </div>
+            <div class="game__content">
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/christmas-sock.png" alt="Chirstmas Sock" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/christmas-sock.png" alt="Chirstmas Sock" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/fireplace.png" alt="Fireplace" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/fireplace.png" alt="Fireplace" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/presents.png" alt="Presents" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                   <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/presents.png" alt="Presents" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                   <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/santa-claus.png" alt="Santa Claus" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                   <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/santa-claus.png" alt="Santa Claus" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/snowglobe.png" alt="Snowglobe" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                   <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/snowglobe.png" alt="Snowglobe" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card ">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/sleigh.png" alt="Sleigh" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+
+                <div class="game__content-card">
+                    <div class="card-face front-face">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake-small snowflake-bottom-right">
+                        <div class="background-circle matched">
+                            <img src="assets/images/sleigh.png" alt="Sleigh" class="card-value">
+                        </div>
+                    </div>
+                    <div class="card-face back-face">
+                        <h3 class="heading-three">Merry<br/>Christmas</h3>
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-top-right">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-left">
+                        <img src="assets/images/card-snowflake.png" alt="snowflake" class="snowflake snowflake-bottom-right">
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+
+        <script type="module" src="./js/script.js" async></script>
+    </body>
+</html>

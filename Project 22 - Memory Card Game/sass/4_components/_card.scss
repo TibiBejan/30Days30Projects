@@ -1,0 +1,113 @@
+.game__content-card {
+	position: relative;
+	height: 20rem;
+	cursor: pointer;
+
+	.card-face {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		border: 0.3rem double $light-color;
+		box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+		overflow: hidden;
+		transition: all 0.5s ease-in-out;
+		backface-visibility: hidden;
+	}
+
+	.front-face {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $primary-green;
+		transform: rotateY(180deg);
+
+		.background-circle {
+			width: 13rem;
+			height: 13rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			border: 0.3rem dotted $light-color;
+			background-color: $secondary-green;
+		}
+
+		.background-circle .card-value {
+			width: 65%;
+			height: 65%;
+			object-fit: cover;
+		}
+	}
+
+	.back-face {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		background-color: $primary-red;
+		transform: rotateY(0deg);
+	}
+}
+
+.game__content-card.visible .front-face {
+	transform: rotateY(0deg);
+}
+.game__content-card.visible .back-face {
+	transform: rotateY(-180deg);
+}
+
+.game__content-card.matched .front-face .background-circle {
+	animation: matched 1.5s linear infinite;
+}
+
+@keyframes matched {
+	0%,
+	100% {
+		transform: rotate(0deg);
+	}
+
+	25% {
+		transform: rotate(-20deg);
+	}
+
+	75% {
+		transform: rotate(20deg);
+	}
+}
+
+.snowflake {
+	width: 9rem;
+	height: 9rem;
+}
+
+.snowflake-small {
+	width: 7rem;
+	height: 7rem;
+}
+
+.snowflake-top-left {
+	position: absolute;
+	top: -2.5rem;
+	left: -2.5rem;
+	transform: rotate(45deg);
+}
+.snowflake-top-right {
+	position: absolute;
+	top: -2.5rem;
+	right: -2.5rem;
+	transform: rotate(-45deg);
+}
+.snowflake-bottom-left {
+	position: absolute;
+	bottom: -2.5rem;
+	left: -2.5rem;
+	transform: rotate(-45deg);
+}
+.snowflake-bottom-right {
+	position: absolute;
+	bottom: -2.5rem;
+	right: -2.5rem;
+	transform: rotate(45deg);
+}

@@ -1,0 +1,142 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 140rem;
+	height: 15rem;
+	margin: 0 auto;
+	padding: 2rem 10rem;
+	background-color: $primary-color;
+	border-bottom-left-radius: 5rem;
+	border-bottom-right-radius: 5rem;
+
+	&__navbar {
+		width: 100%;
+		max-width: 100rem;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.heading-one {
+			line-height: 1.5;
+			font-size: 2rem;
+			font-weight: 700;
+			color: $light-color-1;
+			text-transform: uppercase;
+		}
+
+		.theme-toggler {
+			width: 10rem;
+			height: 3rem;
+			display: flex;
+			align-items: center;
+
+			.toggle-button {
+				position: relative;
+				width: 4rem;
+				height: 2rem;
+				margin: 0 1rem;
+				padding: 0.3rem;
+				background-color: $light-color-1;
+				border-radius: 5rem;
+				cursor: pointer;
+
+				.ball {
+					position: absolute;
+					top: 0.3rem;
+					left: 0.3rem;
+					height: 1.4rem;
+					width: 1.4rem;
+					border-radius: 50%;
+					background-color: $primary-color;
+					transition: 0.25s ease-in-out;
+				}
+			}
+
+			#theme:checked + .toggle-button .ball {
+				transform: translateX(2rem);
+			}
+
+			.fas {
+				font-size: 1.5rem;
+				color: $light-color-1;
+			}
+		}
+	}
+
+	&__search-form {
+		width: 100%;
+		max-width: 100rem;
+		align-self: center;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 2rem;
+		background-color: $light-color-1;
+		transform: translateY(2rem);
+		z-index: 5;
+
+		&-element {
+			padding: 2rem 0;
+		}
+
+		&-element:not(:last-child) {
+			border-right: 0.1rem solid $light-color-3;
+		}
+	}
+}
+
+.jobs-container {
+	width: 100%;
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 10rem 0;
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(min-content, 30rem));
+		gap: 3rem;
+		justify-content: space-between;
+
+		.content-card {
+			height: 20rem;
+			display: grid;
+			grid-template-rows: repeat(3, min-content);
+			row-gap: 3rem;
+			padding: 0 3rem;
+			border-radius: 1rem;
+			background-color: $light-color-1;
+
+			&__company-logo {
+				width: 5rem;
+				height: 5rem;
+				border-radius: 1.5rem;
+				background-color: red;
+				transform: translateY(-2.5rem);
+			}
+
+			&__job-title {
+				line-height: 1.5;
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: $dark-color-1;
+			}
+
+			&__company-name,
+			.job-type {
+				font-size: 1.4rem;
+				font-weight: 400;
+				color: $light-color-3;
+			}
+
+			&__job-location {
+				line-height: 1.5;
+				font-size: 1.3rem;
+				font-weight: 700;
+				color: $primary-color;
+			}
+		}
+	}
+}
