@@ -15,11 +15,10 @@
 	}
 
 	&:hover {
-		background-color: $light-color-1;
-		color: $dark-color-1;
+		opacity: 0.85;
 	}
+}
 
-	&:hover .line {
-		background-color: $dark-color-1;
-	}
+.primary-color {
+	background-color: $primary-color;
 }

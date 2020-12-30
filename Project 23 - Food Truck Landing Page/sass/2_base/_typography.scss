@@ -20,10 +20,25 @@
 	color: $primary-color;
 }
 
+.about-us-label {
+	background-color: $dark-color-1;
+	color: $light-color-1;
+}
+
+.paragraph {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
 .heading-one {
 	@extend %headings;
 	margin-bottom: 10rem;
 	font-size: 10rem;
+}
+
+.heading-two {
+	@extend %headings;
+	font-size: 5rem;
 }
 
 .heading-three {
@@ -35,6 +50,36 @@
 	max-width: 50%;
 	margin: 0 auto;
 	transform: rotate(-10deg);
+}
+
+.heading-four {
+	@extend %headings;
+	font-size: 1.8rem;
+}
+
+.menu__burgers-content .heading-four,
+.menu__hotdogs-content .heading-four,
+.menu__fries-content .heading-four {
+	width: 90%;
+	padding: 2rem 0;
+	border-bottom: 0.15rem solid $dark-color-2;
+
+	span {
+		display: inline-block;
+		padding-top: 1rem;
+	}
+}
+
+.menu__burgers-content .heading-four:nth-child(7),
+.menu__hotdogs-content .heading-four:nth-child(7),
+.menu__fries-content .heading-four:nth-child(7) {
+	border-bottom: none;
+}
+
+.menu__burgers-content .heading-four:nth-child(8),
+.menu__hotdogs-content .heading-four:nth-child(8),
+.menu__fries-content .heading-four:nth-child(8) {
+	border-bottom: none;
 }
 
 .horizontal-list-item {
@@ -52,4 +97,18 @@
 	&:hover {
 		opacity: 0.8;
 	}
+}
+
+.paragrapgh {
+	font-family: $secondary-font-family;
+	font-size: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	line-height: 1.5;
+}
+
+.secondary-font {
+	font-size: 8rem;
+	font-weight: 600;
+	font-family: $secondary-font-family;
 }

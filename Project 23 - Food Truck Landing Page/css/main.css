@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;400;500;600;700;900&family=Barlow:wght@100;300;400;500;700&display=swap");
-.heading-one, .heading-three {
+.heading-one, .heading-two, .heading-three, .heading-four {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -157,6 +157,18 @@ body {
   margin-bottom: 6rem;
 }
 
+.dark-color {
+  color: #000000;
+}
+
+.light-color {
+  color: #ffffff;
+}
+
+.primary-text-color {
+  color: #ffbf00;
+}
+
 .label {
   padding: 1rem;
   background-color: #ffffff;
@@ -179,9 +191,23 @@ body {
   color: #ffbf00;
 }
 
+.about-us-label {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.paragraph {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .heading-one {
   margin-bottom: 10rem;
   font-size: 10rem;
+}
+
+.heading-two {
+  font-size: 5rem;
 }
 
 .heading-three {
@@ -192,6 +218,37 @@ body {
   max-width: 50%;
   margin: 0 auto;
   transform: rotate(-10deg);
+}
+
+.heading-four {
+  font-size: 1.8rem;
+}
+
+.menu__burgers-content .heading-four,
+.menu__hotdogs-content .heading-four,
+.menu__fries-content .heading-four {
+  width: 90%;
+  padding: 2rem 0;
+  border-bottom: 0.15rem solid #1a1817;
+}
+
+.menu__burgers-content .heading-four span,
+.menu__hotdogs-content .heading-four span,
+.menu__fries-content .heading-four span {
+  display: inline-block;
+  padding-top: 1rem;
+}
+
+.menu__burgers-content .heading-four:nth-child(7),
+.menu__hotdogs-content .heading-four:nth-child(7),
+.menu__fries-content .heading-four:nth-child(7) {
+  border-bottom: none;
+}
+
+.menu__burgers-content .heading-four:nth-child(8),
+.menu__hotdogs-content .heading-four:nth-child(8),
+.menu__fries-content .heading-four:nth-child(8) {
+  border-bottom: none;
 }
 
 .horizontal-list-item {
@@ -209,6 +266,20 @@ body {
 
 .horizontal-list-item:hover {
   opacity: 0.8;
+}
+
+.paragrapgh {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  line-height: 1.5;
+}
+
+.secondary-font {
+  font-size: 8rem;
+  font-weight: 600;
+  font-family: "Barlow", sans-serif;
 }
 
 .header {
@@ -232,12 +303,12 @@ body {
 
 .header__navbar-inner {
   height: 100%;
-  max-width: 100rem;
+  max-width: 120rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 10rem;
 }
 
 .header__navbar-inner .links__left,
@@ -306,6 +377,286 @@ body {
   text-align: center;
 }
 
+.info {
+  height: 80rem;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f8f4ed;
+  background-image: url("../../images/foodtruck-sectionbg1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.info__cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.info__cards-box {
+  padding: 5rem 2rem;
+  margin: 0 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.5rem double #f6f3ec;
+}
+
+.about-us {
+  height: 85rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5rem;
+  padding: 10rem 0;
+}
+
+.about-us__left {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-us__left .heading-one {
+  margin-bottom: 2rem;
+}
+
+.about-us__left .about-us-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us__left .about-us-description .vertical-list-item {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.about-us__left .about-us-description .vertical-list-item .fa-check-circle {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 3rem;
+  color: #ffbf00;
+}
+
+.about-us__right {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 5rem;
+}
+
+.about-us__right .about-us-image {
+  justify-self: end;
+  height: 30rem;
+  width: 80%;
+  padding: 1rem;
+  border: 0.5rem double #f6f3ec;
+}
+
+.about-us__right .about-us-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu {
+  min-height: 100vh;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+
+.menu__item {
+  width: 100%;
+  max-width: 120rem;
+  margin: 5rem auto;
+}
+
+.menu .menu__burgers,
+.menu .menu__hotdogs,
+.menu .menu__fries {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .menu__burgers-heading,
+.menu .menu__hotdogs-heading,
+.menu .menu__fries-heading {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  border: 0.3rem solid #ffffff;
+}
+
+.menu .menu__burgers-heading .burger-showcase-menu,
+.menu .menu__burgers-heading .hotdogs-showcase-menu,
+.menu .menu__burgers-heading .fries-showcase-menu,
+.menu .menu__hotdogs-heading .burger-showcase-menu,
+.menu .menu__hotdogs-heading .hotdogs-showcase-menu,
+.menu .menu__hotdogs-heading .fries-showcase-menu,
+.menu .menu__fries-heading .burger-showcase-menu,
+.menu .menu__fries-heading .hotdogs-showcase-menu,
+.menu .menu__fries-heading .fries-showcase-menu {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.menu .menu__burgers-content,
+.menu .menu__hotdogs-content,
+.menu .menu__fries-content {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  border: 0.3rem solid #ffffff;
+  border-top: none;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0;
+  background-color: #f8f4ed;
+  background-image: url("../../images/foodtruck-sectionbg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.events__cards {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.events__cards-box {
+  padding: 5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 0.5rem double #f6f3ec;
+}
+
+.dish {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 40vh;
+}
+
+.dish__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f4ed;
+  background-image: url("../../images/foodtruck-wrapbg3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dish__right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team {
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../images/foodtruck-sectionbg3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.team__members {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.team__members-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+  border: 0.5rem double #f6f3ec;
+}
+
+.team__members-box:nth-child(2) {
+  margin: 0 5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0;
+  background-color: #ffbf00;
+}
+
+.contact__logo {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.contact__logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contact__cards {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .primary-button {
   display: grid;
   grid-template-columns: 1.5rem max-content 1.5rem;
@@ -323,10 +674,9 @@ body {
 }
 
 .primary-button:hover {
-  background-color: #ffffff;
-  color: #000000;
+  opacity: 0.85;
 }
 
-.primary-button:hover .line {
-  background-color: #000000;
+.primary-color {
+  background-color: #ffbf00;
 }

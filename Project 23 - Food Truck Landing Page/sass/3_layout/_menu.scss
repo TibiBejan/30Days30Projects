@@ -1,0 +1,58 @@
+.menu {
+	min-height: 100vh;
+	padding: 10rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $dark-color-1;
+
+	&__item {
+		width: 100%;
+		max-width: $centered;
+		margin: 5rem auto;
+	}
+
+	.menu__burgers,
+	.menu__hotdogs,
+	.menu__fries {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&-heading {
+			position: relative;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding-top: 7rem;
+			padding-bottom: 3rem;
+			border: 0.3rem solid $light-color-1;
+
+			.burger-showcase-menu,
+			.hotdogs-showcase-menu,
+			.fries-showcase-menu {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+		}
+
+		&-content {
+			width: 100%;
+			max-width: $centered;
+			margin: 0 auto;
+			padding: 5rem;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2rem;
+			align-items: center;
+			justify-items: center;
+			text-align: center;
+			border: 0.3rem solid $light-color-1;
+			border-top: none;
+		}
+	}
+}
