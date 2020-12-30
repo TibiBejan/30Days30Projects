@@ -1,0 +1,55 @@
+.label {
+	padding: 1rem;
+	background-color: $light-color-1;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.inner-content__label {
+	font-size: 2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $light-color-1;
+}
+
+.inner-content__price {
+	font-size: 4rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $primary-color;
+}
+
+.heading-one {
+	@extend %headings;
+	margin-bottom: 10rem;
+	font-size: 10rem;
+}
+
+.heading-three {
+	@extend %headings;
+	font-size: 2.5rem;
+}
+
+.inner-content .heading-three {
+	max-width: 50%;
+	margin: 0 auto;
+	transform: rotate(-10deg);
+}
+
+.horizontal-list-item {
+	margin: 0 2rem;
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $primary-color;
+	transition: $hover-transition;
+
+	.navbar-link {
+		color: inherit;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

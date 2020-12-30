@@ -1,0 +1,28 @@
+html {
+	font-family: $primary-font-family;
+	font-weight: 300;
+	font-size: 62.5%;
+	line-height: 1.5;
+	color: $dark-color-1;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 4rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 6rem;
+}

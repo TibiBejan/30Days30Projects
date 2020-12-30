@@ -1,0 +1,15 @@
+%headings {
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	color: $primary-color;
+}
+
+%buttons {
+	display: inline-block;
+	padding: 1.5rem 4rem;
+	font-size: 1.3rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	transition: $hover-transition;
+}
