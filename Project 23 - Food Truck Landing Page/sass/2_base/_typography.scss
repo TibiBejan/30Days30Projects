@@ -1,3 +1,4 @@
+// LABELS
 .label {
 	padding: 1rem;
 	background-color: $light-color-1;
@@ -25,15 +26,25 @@
 	color: $light-color-1;
 }
 
-.paragraph {
+.contant-label {
 	font-size: 2rem;
-	font-weight: 400;
+	font-weight: 500;
+	color: $light-color-1;
 }
 
+// HEADINGS
 .heading-one {
 	@extend %headings;
 	margin-bottom: 10rem;
 	font-size: 10rem;
+
+	@media screen and (max-width: $bp-xlarge) {
+		font-size: 8rem;
+	}
+
+	@media screen and (max-width: $bp-small) {
+		font-size: 5rem;
+	}
 }
 
 .heading-two {
@@ -57,31 +68,7 @@
 	font-size: 1.8rem;
 }
 
-.menu__burgers-content .heading-four,
-.menu__hotdogs-content .heading-four,
-.menu__fries-content .heading-four {
-	width: 90%;
-	padding: 2rem 0;
-	border-bottom: 0.15rem solid $dark-color-2;
-
-	span {
-		display: inline-block;
-		padding-top: 1rem;
-	}
-}
-
-.menu__burgers-content .heading-four:nth-child(7),
-.menu__hotdogs-content .heading-four:nth-child(7),
-.menu__fries-content .heading-four:nth-child(7) {
-	border-bottom: none;
-}
-
-.menu__burgers-content .heading-four:nth-child(8),
-.menu__hotdogs-content .heading-four:nth-child(8),
-.menu__fries-content .heading-four:nth-child(8) {
-	border-bottom: none;
-}
-
+// UL LIST ITEMS
 .horizontal-list-item {
 	margin: 0 2rem;
 	font-size: 1.8rem;
@@ -99,14 +86,16 @@
 	}
 }
 
-.paragrapgh {
+// PARAGRAPHS
+.paragraph {
 	font-family: $secondary-font-family;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	line-height: 1.5;
 }
 
+// SECONDARY FONR ELEMENTS
 .secondary-font {
 	font-size: 8rem;
 	font-weight: 600;

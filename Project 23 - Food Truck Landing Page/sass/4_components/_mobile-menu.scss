@@ -1,0 +1,33 @@
+.mobile-menu {
+	display: none;
+}
+
+@media screen and (max-width: $bp-xlarge) {
+	.mobile-menu {
+		height: 50%;
+		width: 7rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+		cursor: pointer;
+		overflow: hidden;
+
+		.line {
+			width: 5rem;
+			height: 0.5rem;
+			margin-bottom: 0.5rem;
+			border-radius: 5rem;
+			background-color: $primary-color;
+			transition: $hover-transition;
+		}
+
+		.line:nth-child(2) {
+			width: 3rem;
+		}
+	}
+
+	.mobile-menu.toggled .line:nth-child(2) {
+		width: 5rem;
+	}
+}

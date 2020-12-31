@@ -1,31 +1,65 @@
-.contact {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 10rem 0;
-	background-color: $primary-color;
+.contact__logo {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+	margin-bottom: 5rem;
 
-	&__logo {
-		width: 100%;
-		max-width: $centered;
-		margin: 0 auto;
-		margin-bottom: 5rem;
-
-		img {
-			width: 100%;
-			height: auto;
-			object-fit: cover;
-		}
+	@media screen and (max-width: $bp-xlarge) {
+		max-width: 100rem;
 	}
 
-	&__cards {
+	@media screen and (max-width: $utility-bp-1) {
+		max-width: 90rem;
+	}
+
+	img {
 		width: 100%;
-		max-width: $centered;
-		margin: 0 auto;
-		padding: 0 5rem;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+.contact__cards {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 5rem;
+	align-items: center;
+
+	@media screen and (max-width: $bp-xlarge) {
+		max-width: 100rem;
+	}
+
+	@media screen and (max-width: $utility-bp-1) {
+		max-width: 90rem;
+	}
+
+	@media screen and (max-width: $bp-small) {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-between;
+	}
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@media screen and (max-width: $bp-small) {
+			margin: 2rem 0;
+		}
+
+		.contact-social-links {
+			display: flex;
+			align-items: center;
+		}
+
+		.contact-social-links .social-link i {
+			font-size: 3rem;
+			color: $light-color-1;
+		}
 	}
 }

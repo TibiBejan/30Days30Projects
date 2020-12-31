@@ -1,0 +1,25 @@
+.footer {
+	padding: 5rem;
+	background-color: $primary-color;
+	border-top: 0.2rem solid #e5ac00;
+	text-align: center;
+
+	.scroll-to-top {
+		font-size: 3rem;
+		color: $light-color-1;
+		animation: bounce ease-in-out infinite 1s;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(0.5rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}

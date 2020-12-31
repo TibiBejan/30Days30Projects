@@ -1,9 +1,14 @@
 html {
+	scroll-behavior: smooth;
 	font-family: $primary-font-family;
 	font-weight: 300;
 	font-size: 62.5%;
 	line-height: 1.5;
 	color: $dark-color-1;
+
+	@media screen and (max-width: $bp-large) {
+		font-size: 50%;
+	}
 }
 
 body {
@@ -37,4 +42,9 @@ body {
 
 .primary-text-color {
 	color: $primary-color;
+}
+
+.faded {
+	filter: blur(0.3rem);
+	-webkit-filter: blur(0.3rem);
 }

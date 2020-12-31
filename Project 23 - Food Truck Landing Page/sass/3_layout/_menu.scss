@@ -1,58 +1,87 @@
-.menu {
-	min-height: 100vh;
-	padding: 10rem 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: $dark-color-1;
+.menu__item {
+	width: 100%;
+	max-width: 120rem;
+	margin: 5rem auto;
 
-	&__item {
-		width: 100%;
-		max-width: $centered;
-		margin: 5rem auto;
+	@media screen and (max-width: $bp-xlarge) {
+		max-width: 100rem;
 	}
 
-	.menu__burgers,
-	.menu__hotdogs,
-	.menu__fries {
+	@media screen and (max-width: $utility-bp-1) {
+		max-width: 90rem;
+	}
+}
+
+.menu__burgers,
+.menu__hotdogs,
+.menu__fries {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&-heading {
+		position: relative;
+		width: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding-top: 7rem;
+		padding-bottom: 3rem;
+		border: 0.3rem solid $light-color-1;
 
-		&-heading {
-			position: relative;
-			width: 100%;
+		.burger-showcase-menu,
+		.hotdogs-showcase-menu,
+		.fries-showcase-menu {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+	}
+
+	&-content {
+		width: 100%;
+		max-width: 120rem;
+		margin: 0 auto;
+		padding: 5rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 2rem;
+		align-items: center;
+		justify-items: center;
+		text-align: center;
+		border: 0.3rem solid $light-color-1;
+		border-top: none;
+
+		@media screen and (max-width: $bp-xlarge) {
+			max-width: 100rem;
+		}
+
+		@media screen and (max-width: $utility-bp-1) {
+			max-width: 90rem;
+		}
+
+		@media screen and (max-width: $bp-small) {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
-			padding-top: 7rem;
-			padding-bottom: 3rem;
-			border: 0.3rem solid $light-color-1;
-
-			.burger-showcase-menu,
-			.hotdogs-showcase-menu,
-			.fries-showcase-menu {
-				position: absolute;
-				top: 0;
-				left: 50%;
-				transform: translateX(-50%) translateY(-50%);
-			}
 		}
 
-		&-content {
-			width: 100%;
-			max-width: $centered;
-			margin: 0 auto;
-			padding: 5rem;
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			column-gap: 2rem;
-			align-items: center;
-			justify-items: center;
-			text-align: center;
-			border: 0.3rem solid $light-color-1;
-			border-top: none;
+		.heading-four {
+			width: 90%;
+			padding: 2rem 0;
+			border-bottom: 0.15rem solid $dark-color-2;
+		}
+
+		.heading-four span {
+			display: inline-block;
+			padding-top: 1rem;
+		}
+
+		.heading-four:nth-child(7),
+		.heading-four:nth-child(8) {
+			border-bottom: none;
 		}
 	}
 }
