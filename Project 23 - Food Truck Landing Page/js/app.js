@@ -5,24 +5,30 @@
     const mainContent = document.getElementById('main');
 
     toggler.addEventListener('click', () => {
-        toggler.classList.add('toggled');
-        mobileMenu.style.right = "0";
-        mainContent.classList.add('faded');
+        openMobileMenu();
     });
 
     closeButton.addEventListener('click', () => {
-        toggler.classList.remove('toggled');
-        mobileMenu.style.right = "-300px";
-        mainContent.classList.remove('faded');
+        closeMobileMenu();
     });
 
     window.addEventListener('resize', () => {
         if(window.innerWidth > 1250) {
-            toggler.classList.remove('toggled');
-            mobileMenu.style.right = "-300px";
-            mainContent.classList.remove('faded');
+            closeMobileMenu();
         }
     });
+
+    function openMobileMenu(){
+        toggler.classList.add('toggled');
+        mobileMenu.classList.add('active');
+        mainContent.classList.add('faded');
+    }
+
+    function closeMobileMenu(){
+        toggler.classList.remove('toggled');
+        mobileMenu.classList.remove('active');
+        mainContent.classList.remove('faded');
+    }
 })();
 
 (function toggleStickyNavbar(){

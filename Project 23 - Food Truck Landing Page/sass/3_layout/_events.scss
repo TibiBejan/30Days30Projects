@@ -6,6 +6,10 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 
+	@media screen and (max-width: $bp-small) {
+		padding: 10rem 3rem;
+	}
+
 	&__cards {
 		width: 100%;
 		max-width: 120rem;
@@ -37,8 +41,10 @@
 			padding: 5rem;
 			background-color: rgba(255, 255, 255, 0.5);
 			border: 0.5rem double $light-color-3;
+		}
 
-			@media screen and (max-width: $bp-small) {
+		@media screen and (max-width: $bp-small) {
+			&-box {
 				width: 100%;
 			}
 		}
