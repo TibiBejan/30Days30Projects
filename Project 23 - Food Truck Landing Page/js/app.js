@@ -35,10 +35,20 @@
     const navigationBar = document.querySelector('.header__navbar');
 
     window.addEventListener('scroll', () => {
-        if(scrollY > 0){
+        if(scrollY > 100){
             navigationBar.classList.add('sticky');
         } else {
             navigationBar.classList.remove('sticky');
         }
     });
 })();
+
+AOS.init({
+    offset: 200,
+    delay: 50,
+    duration: 800,
+    easing: 'ease-in-out',
+});
+
+
+
