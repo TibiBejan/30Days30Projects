@@ -1,0 +1,38 @@
+html {
+	scroll-behavior: smooth;
+	font-family: $primary-font-family;
+	font-size: 62.5%;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+}
+
+.mb-small {
+	margin-bottom: 1rem;
+}
+
+.mb-medium {
+	margin-bottom: 2rem;
+}
+
+.mb-large {
+	margin-bottom: 4rem;
+}
+
+.mb-xlarge {
+	margin-bottom: 6rem;
+}
+
+.secondary-bg-color {
+	background-color: $secondary-color !important;
+}
+
+.visible {
+	visibility: visible !important;
+	opacity: 1 !important;
+	pointer-events: all !important;
+}

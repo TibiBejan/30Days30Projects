@@ -1,0 +1,27 @@
+.header {
+	min-height: 85vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../../images/hero-background.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	&__navbar {
+		height: 10vh;
+		width: 100%;
+		transition: 0.25s ease-in-out;
+
+		&-wrapper {
+			height: 100%;
+			width: 100%;
+			max-width: 120rem;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__hero {
+		min-height: 75vh;
+		width: 100%;
+	}
+}

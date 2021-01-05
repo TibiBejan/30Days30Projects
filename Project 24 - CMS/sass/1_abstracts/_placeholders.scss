@@ -1,0 +1,15 @@
+%heading {
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: 600;
+	color: $light-color-1;
+}
+
+%button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: $light-color-1;
+	transition: 0.25s ease-in-out;
+}

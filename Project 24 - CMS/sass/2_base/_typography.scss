@@ -1,0 +1,94 @@
+.heading-one {
+	@extend %heading;
+	font-size: 2.5rem;
+}
+
+.showcase-font {
+	font-family: $showcase-font-family;
+	font-size: 3rem;
+	font-weight: 800;
+	text-transform: capitalize;
+}
+
+.heading-two {
+	@extend %heading;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+.heading-three {
+	@extend %heading;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.page-link {
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: $light-color-4;
+	text-transform: uppercase;
+
+	&:hover {
+		color: $light-color-1;
+	}
+}
+
+.post-category-label,
+.post-categories__label {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: $light-color-1;
+	text-transform: uppercase;
+}
+
+.post-details__author-name,
+.post-details__date,
+.post-date {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.15rem;
+	color: $light-color-3;
+}
+
+.post-date {
+	font-weight: 400;
+}
+
+.search-form-label {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	color: $light-color-3;
+}
+
+.post-paragraph,
+.paragraph {
+	font-size: 1.7rem;
+	font-weight: 300;
+	letter-spacing: 0.15rem;
+	word-spacing: 0.15rem;
+	line-height: 1.5;
+}
+
+.paragraph-small {
+	font-size: 1.3rem;
+	font-weight: 400;
+	color: $light-color-4;
+}
+
+.popular-post__date {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: $dark-color-1;
+}
+
+.tag-label {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: $dark-color-1;
+	text-transform: uppercase;
+}
+
+.dark-color {
+	color: $dark-color-2;
+}

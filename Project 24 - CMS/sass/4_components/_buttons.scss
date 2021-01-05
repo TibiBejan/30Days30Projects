@@ -1,0 +1,57 @@
+.search-button {
+	@extend %button;
+	background-color: transparent;
+	padding: 1rem 0;
+
+	.button-inner-text {
+		display: none;
+	}
+
+	.fa-search {
+		font-size: 2rem;
+	}
+}
+
+.transparent-button {
+	@extend %button;
+	background-color: transparent;
+	font-size: 3rem;
+	color: $light-color-1;
+}
+
+.primary-button {
+	@extend %button;
+	height: 100%;
+	background-color: $primary-color;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $light-color-1;
+
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
+
+#scroll-top {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	width: 5rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $dark-color-1;
+	border-radius: 50%;
+	font-size: 2rem;
+	color: $light-color-1;
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.25s ease-in-out;
+
+	&:hover {
+		background-color: $primary-color;
+	}
+}

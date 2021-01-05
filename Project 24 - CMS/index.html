@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CMS - Content Management System</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- =========== HEADER =========== -->
+        <header class="header">
+            <div class="header__navbar sticky">
+                <div class="header__navbar-wrapper">
+                    <div class="navbar-top">
+                        <div class="navbar-top__toggler" id="toggle-menu">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <ul class="navbar-top__social-links">
+                            <li class="horizontal-list-item">
+                                <a href="#" class="link"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="link"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="link"><i class="fab fa-github-square"></i></a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="link"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                        <h1 class="heading-one showcase-font">Development.</h1>
+                        <button type="button" class="search-button">
+                            <span class="button-inner-text">Search</span>
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <nav class="navbar-bottom">
+                        <button type="button" class="transparent-button mb-small" id="close-menu">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <h2 class="heading-two mb-large">Website navigation</h2>
+                        <ul class="navbar-bottom__links">
+                            <li class="horizontal-list-item">
+                                <a href="#" class="page-link">Home</a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="page-link">About Us</a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="page-link">Contact Us</a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="page-link">Log In</a>
+                            </li>
+                            <li class="horizontal-list-item">
+                                <a href="#" class="page-link">Sign Up</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__hero">
+                <div class="header__hero-post">
+                    <span class="post-category-label mb-medium">Javascript</span>
+                    <h2 class="heading-two mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, expedita!</h2>
+                    <div class="post-details">
+                        <span class="post-details__author-name">Jhon Doe</span>
+                        <span class="post-details__date">January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="header__hero-post">
+                    <span class="post-category-label secondary-bg-color mb-medium">Php</span>
+                    <h2 class="heading-two mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, expedita!</h2>
+                    <div class="post-details">
+                        <span class="post-details__author-name">Jhon Doe</span>
+                        <span class="post-details__date">January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="header__hero-post">
+                    <span class="post-category-label secondary-bg-color mb-medium">SASS</span>
+                    <h2 class="heading-two mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, expedita!</h2>
+                    <div class="post-details">
+                        <span class="post-details__author-name">Jhon Doe</span>
+                        <span class="post-details__date">January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="header__search-overlay">
+                    <form id="search-form">
+                        <h2 class="heading-two">Searh for:</h2>
+                        <input type="text" name="search-input" placeholder="Type Keywords" class="form-input mb-medium">
+                        <span class="search-form-label">Press Enter to begin your search.</span>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- =========== BLOG POSTS =========== -->
+        <section class="posts">
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+            <div class="posts__card">
+                <div class="posts__card-image">
+                    <img src="" alt="">
+                </div>
+                <div class="posts__card-content">
+                    <span class="post-date mb-medium">January 05, 2020</span>
+                    <a href="#"><h2 class="heading-one dark-color mb-medium">Lorem ipsum dolor sit amet.</h2></a>
+                    <p class="post-paragraph mb-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veritatis iste, ea unde suscipit tempore voluptate. Cupiditate, magni dicta! Perspiciatis beatae modi nam nostrum itaque.</p>
+                    <div class="post-categories">
+                        <span class="post-category-label">Javascript</span>
+                        <span class="post-category-label secondary-bg-color">HTML</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========== POPULAR POSTS =========== -->
+        <section class="extra">
+            <div class="extra__popular-posts mb-xlarge">
+                <h1 class="heading-one dark-color mb-large">Popular Posts</h1>
+                <div class="popular-post">
+                    <div class="popular-post__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="popular-post__content">
+                        <h3 class="heading-three dark-color mb-medium">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+                        <span class="popular-post__date">By Jhon Doe on January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="popular-post__content">
+                        <h3 class="heading-three dark-color mb-medium">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+                        <span class="popular-post__date">By Jhon Doe on January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="popular-post__content">
+                        <h3 class="heading-three dark-color mb-medium">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+                        <span class="popular-post__date">By Jhon Doe on January 05, 2020</span>
+                    </div>
+                </div>
+                <div class="popular-post">
+                    <div class="popular-post__image">
+                        <img src="" alt="">
+                    </div>
+                    <div class="popular-post__content">
+                        <h3 class="heading-three dark-color mb-medium">Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+                        <span class="popular-post__date">By Jhon Doe on January 05, 2020</span>
+                    </div>
+                </div>
+            </div>
+            <div class="extra__about-us mb-xlarge">
+                <h1 class="heading-one dark-color mb-large">About Development</h1>
+                <p class="paragraph mb-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nam minima animi! Minus quibusdam ipsum aliquam sapiente omnis, inventore culpa iste in. Deleniti quaerat illo nostrum soluta, suscipit vero, inventore natus expedita, rem voluptatibus debitis assumenda repellat dignissimos fugit voluptatum? Expedita corporis aliquid doloribus harum ipsam quisquam cupiditate ut quis.</p>
+                <ul class="social-links">
+                    <li class="horizontal-list-item">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="social-link"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="social-link"><i class="fab fa-github-square"></i></a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="extra__tags">
+                <h1 class="heading-one dark-color mb-large">Tags</h1>
+                <div class="extra__tags-labels">
+                    <a href="#"><span class="tag-label">Javascript</span></a>
+                    <a href="#"><span class="tag-label">HTML</span></a>
+                    <a href="#"><span class="tag-label">CSS</span></a>
+                    <a href="#"><span class="tag-label">SASS</span></a>
+                    <a href="#"><span class="tag-label">PHP</span></a>
+                    <a href="#"><span class="tag-label">SQL</span></a>
+                    <a href="#"><span class="tag-label">React</span></a>
+                    <a href="#"><span class="tag-label">Laravel</span></a>
+                </div> 
+            </div>
+        </section>
+        <!-- =========== FOOTER =========== -->
+        <footer class="footer">
+            <div class="footer__links mb-xlarge">
+                <h1 class="heading-one mb-large">Quick Links</h1>
+                <ul class="footer__links-list">
+                    <li class="horizontal-list-item">
+                        <a href="#" class="page-link">Home</a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="page-link">About Us</a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="page-link">Contact Us</a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="page-link">Log In</a>
+                    </li>
+                    <li class="horizontal-list-item">
+                        <a href="#" class="page-link">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__newsletter mb-xlarge">
+                <h1 class="heading-one mb-large">Our Newsletter</h1>
+                <p class="paragraph paragraph-small mb-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex in sint molestiae ducimus maxime tenetur delectus facere minima aliquam a? Rem possimus repellat earum sunt!</p>
+                <form class="footer__newsletter-form">
+                    <div class="footer-form-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <input type="text" placeholder="Email Adress" name="email" class="footer-form-input">
+                    <button type="button" class="button primary-button">Send</button>
+                </form>
+            </div>
+            <div class="footer__copyright">
+                <p class="paragraph paragraph-small">&copy; Copyright Development 2020</p>
+            </div>
+        </footer>
+
+        <a href="#" id="scroll-top" class="visible">
+            <i class="fas fa-long-arrow-alt-up"></i>
+        </a>
+        
+        <script src="./js/script.js"></script>
+    </body>
+</html>
